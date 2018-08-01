@@ -3,7 +3,7 @@ Author:Gnanika
 Date:1 august 2018
 
 '''
-# print a series of given numbers 
+# print a series of given numbers using while loop 
 n=2
 while n<11:
 	print(n)

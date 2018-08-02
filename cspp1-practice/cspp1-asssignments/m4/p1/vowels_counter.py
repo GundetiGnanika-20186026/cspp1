@@ -7,7 +7,7 @@ def main():
 	S_T = input()
 	N_V = 0
 	for char in S_T:
-		if char == 'a' or char == 'e' or char == 'i' or char == 'o' or char == 'u'
+		if char == 'a' or char == 'e' or char == 'i' or char == 'o' or char == 'u':
 			N_V += 1
 	print("Number of vowels:"+" "+str(N_V))
 

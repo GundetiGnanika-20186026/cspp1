@@ -4,13 +4,13 @@ Date:1 august 2018
 
 '''
 # Testing of comparing operators and if condition
-varA=2
-varB="gnani"
-if type(varA) is str or type(varB) is str:
+VARA = 2
+VARB = "gnani"
+if isinstance(VARA) is str or isinstance(VARB) is str:
     print("string involved")
-elif varA>varB:
+elif VARA > VARB:
 	print("bigger")
-elif varA==varB:
+elif VARA == VARB:
     print("equal")
 else:
     print("smaller")

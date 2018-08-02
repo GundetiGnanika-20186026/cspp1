@@ -1,12 +1,13 @@
-# Exercise: Assignment-1
-# Write a Python function, factorial(n), that takes in one number and
-# returns the factorial of given number.
+'''
+Author:Gnanika
+Date:2 August 2018
 
-# This function takes in one number and returns one number.
+'''
 
 def main():
+    ''' calculating the sum '''
     data = input()
-    print(int(data[0])+int(data[1]))
+    print(int(data[0]) + int(data[3]))
 
 if __name__ == "__main__":
     main()

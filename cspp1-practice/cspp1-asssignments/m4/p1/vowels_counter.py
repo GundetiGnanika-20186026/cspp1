@@ -10,7 +10,7 @@ def main():
     for ch_ar in s_t:
         if ch_ar in ('a', 'e', 'i', 'o', 'u'):
             n_v += 1
-    print("Number of vowels:"+" "+str(n_v))
+    print(n_v)
 
 if __name__ == "__main__":
     main()

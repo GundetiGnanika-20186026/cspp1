@@ -9,8 +9,8 @@ def main():
     max1 = 0
     c_t = 0
     s_t = input()
-    s_t1 = " "
-    s_t3 = " "
+    s_t1 = ""
+    s_t3 = ""
     i = 0
     #s_t3 = s_t1[0]
     for i in range(0, len(s_t)-1):

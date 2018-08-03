@@ -6,7 +6,7 @@ Date: 3 august 2018
 
 def main():
     ''' perfect cube '''
-    in_num = int(input('Enter an integer: '))
+    in_num = int(input())
     count = 0
     while count**3 < in_num:
         count = count + 1

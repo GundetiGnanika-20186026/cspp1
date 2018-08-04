@@ -11,8 +11,8 @@ def main():
     for char in str_input:
         if char in "!@#$%^&*":
             print(" ")
-        elif char not in "!@#$%^&*":
-            print(str(char))
+        else:
+            print(char)
 
 if __name__ == "__main__":
     main()

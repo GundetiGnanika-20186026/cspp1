@@ -10,6 +10,8 @@ def main():
     int_input = int(input())
     product = 1
     extra = int_input
+    if int_input == 0:
+        print("0")
     while int_input > 0:
         reminde_r = int_input % 10
         product = product * reminde_r
@@ -24,6 +26,5 @@ def main():
         int_input = -(int_input)
     if extra < 0:
         print("-"+ str(product))
-    
 if __name__ == "__main__":
     main()

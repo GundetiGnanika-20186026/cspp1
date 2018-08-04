@@ -1,18 +1,17 @@
 '''
-Replace all the special characters(!, @, #, $, %, ^, &, *) in a given string with a space.
-example : ab!@#cd is the input, the output is ab   cd
-Output has three spaces, which are to be replaced with these special characters
+Author:Gnanika
+Date:4 August 2018
 '''
 def main():
     '''
-    Read string from the input, store it in variable str_input.
+    Replacing of special characters with space in given string
     '''
     str_input = str(input())
+    str_out = " "
     for char in str_input:
         if char in "!@#$%^&*":
-            print(" ")
-        else:
-            print(char)
-
+           char = " "
+        str_out = str_out + char
+    print(str_out) 
 if __name__ == "__main__":
     main()

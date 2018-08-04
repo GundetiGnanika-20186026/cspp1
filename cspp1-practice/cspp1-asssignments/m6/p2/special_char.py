@@ -9,7 +9,7 @@ def main():
     '''
     str_input = str(input())
     for char in str_input:
-        if char in ('!','@','#','$','%','^','&','*'):
+        if char in "!@#$%^&*":
             print(" ")
         else:
             print(str(char))

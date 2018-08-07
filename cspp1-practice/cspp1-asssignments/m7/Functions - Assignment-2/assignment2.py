@@ -9,7 +9,7 @@ def payingdebtoffina_year(balance, annualinterest_rate):
     mfp = 0
     while 1:
         updatebal = balance
-        for i in range(12):
+        for _ in range(12):
             monthly_ir = annualinterest_rate / 12.0
             monthly_unpaidbal = updatebal - mfp
             updatebal = monthly_unpaidbal + monthly_ir * monthly_unpaidbal

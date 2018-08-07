@@ -4,15 +4,15 @@ date:6 August
 '''
 def payingdebtoffina_year(balance, annualinterestrate, monthlypaymentrate):
     '''finding of credit card balance after one year'''
-    n = 1
+    n_m = 1
     extra = balance
-    while n <= 12:
-        monthly_ir=(annualinterestrate)/12.0
-        min_monthpay=(monthlypaymentrate)*extra
-        monthly_unpaidbal=extra-min_monthpay
-        extra=monthly_unpaidbal+(monthly_ir*monthly_unpaidbal)
-        n=n+1
-    return ("Remaining balance: "+str(round(extra, 2)))
+    while n_m <= 12:
+        monthly_ir = (annualinterestrate) / 12.0
+        min_monthpay = (monthlypaymentrate) * extra
+        monthly_unpaidbal = extra - min_monthpay
+        extra = monthly_unpaidbal + (monthly_ir * monthly_unpaidbal)
+        n_m = n_m + 1
+    return "Remaining balance: "+str(round(extra, 2))
 
 def main():
     '''

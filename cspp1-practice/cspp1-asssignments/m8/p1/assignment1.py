@@ -8,14 +8,12 @@ def factorial(num):
 
     returns: a positive integer, the factorial of n.
     '''
-    if num == 1 or num == 0:
+    if num in (1, 0):
         return 1
-    else:
-        return num * factorial(num - 1)
+    return num * factorial(num - 1)
 def main():
     '''main function'''
-    a = input()
-    print(factorial(int(a)))    
-
+    a_in = input()
+    print(factorial(int(a_in)))
 if __name__ == "__main__":
     main()

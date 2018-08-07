@@ -10,6 +10,5 @@ def main():
     while abs(gues_s ** 2 - squar_e) >= epsilon:
         gues_s = gues_s - (((gues_s ** 2 - squar_e) / (2 * gues_s)))
     print(gues_s)
-
 if __name__ == "__main__":
-	main()
+    main()

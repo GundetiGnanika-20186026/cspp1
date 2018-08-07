@@ -16,7 +16,7 @@ def payingdebtoffina_year(balance, annualinterest_rate):
         if updatebal <= 0:
             break
         mfp = mfp + 10
-    return ("Lowest payment: "+ str(mfp))
+    return "Lowest payment: "+ str(mfp)
 
 def main():
     '''This is main function'''
@@ -24,6 +24,5 @@ def main():
     data = data.split(' ')
     data = list(map(float, data))
     print(payingdebtoffina_year(data[0], data[1]))
-    
 if __name__ == "__main__":
     main()

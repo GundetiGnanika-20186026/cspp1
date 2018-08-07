@@ -9,10 +9,10 @@ def sumofdigits(num):
     '''
     if num == 0:
         return num
-    return (num % 10 + sumofdigits(num//10))
+    return num % 10 + sumofdigits(num//10)
 def main():
     '''main function'''
-    a = input()
-    print(sumofdigits(int(a)))
+    a_in = input()
+    print(sumofdigits(int(a_in)))
 if __name__ == "__main__":
     main()

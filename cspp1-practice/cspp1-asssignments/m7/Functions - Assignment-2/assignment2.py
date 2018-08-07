@@ -16,7 +16,7 @@ def payingdebtoffina_year(balance, annualinterest_rate):
         if updatebal <= 0:
             break
         mfp = mfp + 10
-    return "Lowest payment: "+ str(mfp)
+    return "Lowest payment: "+str(mfp)
 
 def main():
     '''This is main function'''

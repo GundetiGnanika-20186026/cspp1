@@ -25,7 +25,7 @@ def payingdebtoffina_year(balance, annualinterest_rate):
             upper_b = mfp
         else:
             break
-    return "Lowest payment: "+str(round(mfp, 2))
+    return "Lowest Payment: "+str(round(mfp, 2))
 def main():
     '''main function'''
     data = input()

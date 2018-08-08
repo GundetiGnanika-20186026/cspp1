@@ -10,9 +10,9 @@ def get_guessed_word(secret_word, letters_guessed):
       what letters in secret_word have been guessed so far.
     '''
     str_ing = ""
-    for char in letters_guessed:
+    for char in secret_word:
 
-        if char in secret_word:
+        if char in letters_guessed:
             str_ing=str_ing+char
         else:
         	str_ing=str_ing+"_"

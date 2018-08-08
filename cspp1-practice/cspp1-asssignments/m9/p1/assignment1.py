@@ -1,12 +1,7 @@
 '''
-Exercise: Assignment-1
-First, implement the function isWordGuessed that takes in two parameters -
-a string, secret_word, and a list of letters, letters_guessed. This function
-returns a boolean - True if secret_word has been guessed (ie, all the letters of
-secret_word are in letters_guessed) and False otherwise.
+Author:Gnanika
+Date: 8 August 2018
 '''
-
-
 def is_word_guessed(secret_word, letters_guessed):
     '''
     secret_word: string, the word the user is guessing
@@ -17,13 +12,11 @@ def is_word_guessed(secret_word, letters_guessed):
     len_secret_word = len(secret_word)
     cou_nt = 0
     for char in secret_word:
-       if char in letters_guessed :
-          cou_nt = cou_nt + 1
+       if char in letters_guessed:
+            cou_nt = cou_nt + 1
     if cou_nt == len_secret_word:
         return "True"
-    else:
-        return "False" 
-
+    return "False"
 def main():
     '''
     Main function for the program

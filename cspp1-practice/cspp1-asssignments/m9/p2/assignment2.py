@@ -1,9 +1,6 @@
 '''
-Exercise: Assignment-2
-Next, implement the function getGuessedWord that takes in two parameters
-a string, secret_word, and a list of letters, letters_guessed. This function
-returns a string that is comprised of letters and underscores, based on what
-letters in letters_guessed are in secret_word. This shouldn't be too different from isWordGuessed!
+Author:Gnanika
+Date:8 August 2018
 '''
 def get_guessed_word(secret_word, letters_guessed):
     '''
@@ -12,8 +9,15 @@ def get_guessed_word(secret_word, letters_guessed):
     returns: string, comprised of letters and underscores that represents
       what letters in secret_word have been guessed so far.
     '''
-    # FILL IN YOUR CODE HERE...
-    pass
+    str_ing = ""
+    for char in letters_guessed:
+
+        if char in secret_word:
+            str_ing=str_ing+char
+        else:
+        	str_ing=str_ing+"_"
+    return str_ing
+    
 
 def main():
     '''

@@ -20,9 +20,9 @@ def is_word_guessed(secret_word, letters_guessed):
        if char in letters_guessed :
           cou_nt = cou_nt + 1
     if cou_nt == len_secret_word:
-        print("True")
+        return "True"
     else:
-        print("False") 
+        return "False" 
 
 def main():
     '''

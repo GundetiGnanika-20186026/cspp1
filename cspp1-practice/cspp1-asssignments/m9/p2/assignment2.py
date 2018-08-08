@@ -11,14 +11,11 @@ def get_guessed_word(secret_word, letters_guessed):
     '''
     str_ing = ""
     for char in secret_word:
-
         if char in letters_guessed:
-            str_ing=str_ing+char
+            str_ing = str_ing + char
         else:
-        	str_ing=str_ing+"_"
+            str_ing = str_ing + "_"
     return str_ing
-    
-
 def main():
     '''
     Main function for current assignment

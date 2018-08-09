@@ -17,7 +17,7 @@ def get_available_letters(letters_guessed):
     for i in letters_guessed:
         if i in li_st:
             li_st.remove(i)
-    return li_st
+    return ''.join(str(c) for c in li_st)
     
 
 

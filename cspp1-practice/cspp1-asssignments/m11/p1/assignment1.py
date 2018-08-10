@@ -1,8 +1,7 @@
 '''
-Exercise: Assignment-1
-The first step is to implement some code that allows us to calculate the score for a single word. The function get_word_score should accept as input a string of lowercase letters (a word) and return the integer score for that word, using the game's scoring rules.
+Author:Gnanika
+Date:10 August 2018
 '''
-
 def get_word_score(word, num):
     """
     Returns the score for a word. Assumes the word is a valid word.
@@ -18,22 +17,18 @@ def get_word_score(word, num):
     n: integer (HAND_SIZE; i.e., hand size required for additional points)
     returns: int >= 0
     """
-    # TO DO ... <-- Remove this comment when you code this function
-    SCRABBLE_LETTER_VALUES = {
-    'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1,
-    'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1,
-    's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10
+    scrabble_letter_values = {
+        'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 'h': 4, 'i': 1,
+        'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 'o': 1, 'p': 3, 'q': 10, 'r': 1,
+        's': 1, 't': 1, 'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10
     }
-    sum = 0
-    leng_th=len(word)
+    sum_score = 0
+    leng_th = len(word)
     for i in word:
-        sum = sum + SCRABBLE_LETTER_VALUES[i]
+        sum_score = sum_score + scrabble_letter_values[i]
     if num == leng_th:
-        return (sum * leng_th)+50
-    else:
-        return sum * leng_th
-
-
+        return (sum_score * leng_th)+50
+    return sum_score * leng_th
 def main():
     '''
     Main function for the given problem
@@ -41,7 +36,5 @@ def main():
     data = input()
     data = data.split()
     print(get_word_score(data[0], int(data[1])))
-
-
 if __name__ == "__main__":
     main()

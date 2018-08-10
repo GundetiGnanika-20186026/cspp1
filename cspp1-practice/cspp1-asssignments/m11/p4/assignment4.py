@@ -9,8 +9,11 @@ def calculateHandlen(hand):
     hand: dictionary (string int)
     returns: integer
     """
-    # TO DO... <-- Remove this comment when you code this function
-    return len(hand)
+    sum_val=0
+    for i in hand:
+    	sum_val=sum_val+hand[i]
+    return sum_val
+    
 
 def main():
 	n=input()

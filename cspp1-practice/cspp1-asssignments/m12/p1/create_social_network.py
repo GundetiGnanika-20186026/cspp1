@@ -34,8 +34,16 @@ def create_social_network(data):
     l=[]
     adict={}
     for i in data:
-        l=data.split(follows)
+        l.append(i)
+        #l=data.split(follows)
     for i in l:
+        l2=i.split('follows')
+    #if l2[0] in adict:
+        #l2[1]=l2[1].split(",")
+    #else:
+        l2[1]=l2[1].split(",")
+        adict[l2[0]]=l2[1]
+    return adict
 
 
 def main():
@@ -49,8 +57,8 @@ def main():
         string += input()
         string += '\n'
 
-    print(string)
-    #print(create_social_network(string))
+    
+    print(create_social_network(string))
 
 if __name__ == "__main__":
     main()

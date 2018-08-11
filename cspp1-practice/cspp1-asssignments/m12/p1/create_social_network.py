@@ -33,6 +33,7 @@ def create_social_network(data):
     '''
     li_st = []
     adict = {}
+    print(data)
     for i in data:
         li_st.append(i)
     print(li_st)

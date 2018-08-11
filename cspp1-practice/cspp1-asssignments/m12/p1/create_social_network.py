@@ -34,7 +34,7 @@ def create_social_network(data):
     #li_st = []
     adict = {}
     print(data)
-    l=list(data[0])
+    l=data.split("\n")
     print(l)
     '''for i in data:
         li_st.append(i)

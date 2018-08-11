@@ -31,12 +31,10 @@ def create_social_network(data):
         Return a empty dictionary if the string format of the data is invalid
         Empty dictionary is not None, it is a dictionary with no keys
     '''
-    #li_st = []
     adict = {}
     l = data.split("\n")
    # print(l)
     l2 = []
-    l3=[]
     for i in l:
         l2 = l2 + i.split("follows")
     #print(l2)
@@ -58,7 +56,7 @@ def create_social_network(data):
        # l2[1]=l2[1].split(",")
     '''    #adict[l2[0]]=l2[1]
     return adict
-   #
+   
 
 def main():
     '''

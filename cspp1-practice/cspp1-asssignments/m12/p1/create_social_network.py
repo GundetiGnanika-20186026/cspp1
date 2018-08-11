@@ -1,5 +1,6 @@
 '''
-    Assignment-1 Create Social Network
+    Author:Gnanika
+    Date:12 August 2018
 '''
 
 def create_social_network(data):
@@ -42,22 +43,7 @@ def create_social_network(data):
         #l2=j.split(":")
         #l2[1] = l2[1].split(",")
         adict[j[0]] = j[1]
-
-
-    '''
-        #l=data.split(follows)
-    #l2 = li_st.split("follows")
-    #print(l2)
-    #for i in li_st:
-       # l2=i.split("follows")
-    #if l2[0] in adict:
-        #l2[1]=l2[1].split(",")
-    #else:
-       # l2[1]=l2[1].split(",")
-    '''    #adict[l2[0]]=l2[1]
     return adict
-   
-
 def main():
     '''
         handling testcase input and printing output
@@ -68,9 +54,6 @@ def main():
         i += 1
         string += input()
         string += '\n'
-
-    
     print(create_social_network(string))
-
 if __name__ == "__main__":
     main()

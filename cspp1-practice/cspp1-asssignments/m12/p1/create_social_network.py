@@ -43,8 +43,8 @@ def create_social_network(data):
     for j in li_st2[1:len(li_st2+1):2]:
         #l2=j.split(":")
         #l2[1] = l2[1].split(",")
-        k =k +j.list(j)
-    print(k)
+        k =k +list(j)
+    #print(k)
         #adict[j[0]] = j[1]
     return adict
 def main():

@@ -35,9 +35,10 @@ def create_social_network(data):
     adict = {}
     l=data.split("\n")
     print(l)
+    l2=[]
     for i in l:
-        i.split("follows")
-    print(l)
+        l2=l2+i.split("follows")
+    print(l2)
     '''
         #l=data.split(follows)
     #l2 = li_st.split("follows")

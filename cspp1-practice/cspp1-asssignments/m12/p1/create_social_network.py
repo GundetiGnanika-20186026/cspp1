@@ -39,12 +39,12 @@ def create_social_network(data):
     li_st.split("follows")
     print(li_st)
     #for i in li_st:
-        l2=i.split("follows")
+       # l2=i.split("follows")
     #if l2[0] in adict:
         #l2[1]=l2[1].split(",")
     #else:
-        l2[1]=l2[1].split(",")
-        adict[l2[0]]=l2[1]
+       # l2[1]=l2[1].split(",")
+        #adict[l2[0]]=l2[1]
     return adict
     
 

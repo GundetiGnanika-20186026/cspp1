@@ -33,13 +33,13 @@ def create_social_network(data):
         Empty dictionary is not None, it is a dictionary with no keys
     '''
     adict = {}
-    l = data.split("\n")
+    li_st = data.split("\n")
    # print(l)
-    l2 = []
-    for i in l:
-        l2 = l2 + i.split("follows")
+    li_st2 = []
+    for i in li_st:
+        li_st2 = li_st2 + i.split("follows")
     #print(l2)
-    for j in l2:
+    for j in li_st2:
         #l2=j.split(":")
         #l2[1] = l2[1].split(",")
         adict[j[0]] = j[1]

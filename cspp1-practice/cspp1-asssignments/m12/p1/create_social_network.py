@@ -50,7 +50,7 @@ def create_social_network(data):
        # l2[1]=l2[1].split(",")
         #adict[l2[0]]=l2[1]
     return adict
-    
+   ''' 
 
 def main():
     '''

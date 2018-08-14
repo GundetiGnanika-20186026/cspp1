@@ -52,8 +52,6 @@ def is_flush(hand):
     	    count_clubs += 1
     	if i[1] == 'H':
     	    count_hearts += 1
-        else:
-        	print("invalid suit")
     if count_dimd == 5 or count_spade == 5 or count_clubs == 5 or count_hearts == 5: 
         return True
     

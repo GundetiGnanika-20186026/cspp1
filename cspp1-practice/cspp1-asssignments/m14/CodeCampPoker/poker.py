@@ -56,8 +56,8 @@ def is_flush(hand):
         	print("invalid suit")
     if count_dimd == 5 or count_spade == 5 or count_clubs == 5 or count_hearts == 5: 
         return True
-    else:
-    	return False
+    
+    return False
 ##############################################################################################
 def hand_rank(hand):
     '''

@@ -46,11 +46,11 @@ def is_flush(hand):
     for i in hand:
     	if i[1] == 'D':
     	    count_dimd += 1
-    	elif i[1] == 'S':
+    	if i[1] == 'S':
     	    count_spade += 1
-    	elif i[1] == 'C':
+    	if i[1] == 'C':
     	    count_clubs += 1
-    	elif i[1] == 'H':
+    	if i[1] == 'H':
     	    count_hearts += 1
         else:
         	print("invalid suit")

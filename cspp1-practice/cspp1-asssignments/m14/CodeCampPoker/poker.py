@@ -15,13 +15,12 @@ def is_straight(hand):
         Write the code for it and return True if it is a straight else return False
     '''
     sequence = '23456789TJQKA'
-    my_dict = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':12 }
+    my_dict = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, 'T':10, 'J':11, 'Q':12, 'K':13, 'A':14}
     list_1 = [] 
     for i in my_dict:
     	for j in hand:
     	    if i == j[0]:
     	    	list_1.append(i[0])
-
     for i in range(len(sequence)-4):
     	if sequence[i:i+5] == ''.join(list_1):
     		return True

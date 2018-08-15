@@ -2,9 +2,25 @@
     Author:Gnanika
     Date:14 August 2018
 '''
+def is_fourofkind(hand):
+	c1 = 0
+	c2 = 0
+	first1 = hand[0][0]
+	first2 = hand[1][0]
+	for i in hand:
+		if i[0] == first1
+		    c1 += 1
+		if i[0] == first2
+		    c2 += 1
+    if c1 == 4 or c2 == 4
+        return True
+    return False
+
+
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
+        
         The hand has a list of cards represented as strings.
         There are multiple ways of checking if the hand is a straight.
         Do we need both the characters in the string? No.
@@ -73,14 +89,16 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     # best hand of these 3 would be a straight flush with the return value 3
     if is_flush(hand) and is_straight(hand):
-        return 3
+        return 4
      # the second best would be a flush with the return value 2
     if is_flush(hand):
-        return 2
+        return 3
     # third would be a straight with the return value 1
     if is_straight(hand):
-        return 1
+        return 2
      # any other hand would be the fourth best with the return value 0
+    if is_fourofkind(hand):
+    	return 1
     return 0
 def poker(hands):
     '''

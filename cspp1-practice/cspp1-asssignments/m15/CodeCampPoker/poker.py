@@ -26,7 +26,7 @@ def is_straight(hand):
             return True
     return False
 #################################### or##############################################
-   '''
+    '''
     string_values = "--23456789TJQKA"
     hand_values = []
     for i in hand:

@@ -16,6 +16,24 @@ def is_fourofkind(hand):
     if c1 == 4 or c2 == 4:
         return True
     return False
+def is_threeofkind(hand):
+    '''main function for three of a kind'''
+    c1 = 0
+    c2 = 0
+    c3 = 0
+    first1 = hand[0][0]
+    first2 = hand[1][0]
+    first3 = hand[2][0]
+    for i in hand:
+        if i[0] == first1:
+            c1 += 1
+        if i[0] == first2:
+            c2 += 1
+        if i[0] == first3:
+            c3 += 1
+    if c1 == 3 or c2 == 3 or c3 == 3:
+        return True
+    return False
 
 
 def is_straight(hand):

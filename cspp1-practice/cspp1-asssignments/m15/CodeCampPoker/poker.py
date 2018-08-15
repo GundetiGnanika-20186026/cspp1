@@ -34,6 +34,30 @@ def is_threeofkind(hand):
     if c1 == 3 or c2 == 3 or c3 == 3:
         return True
     return False
+def is_onepair(hand):
+    '''main function for one pair'''
+    c1 = 0
+    c2 = 0
+    c3 = 0
+    c4 = 0
+    first1 = hand[0][0]
+    first2 = hand[1][0]
+    first3 = hand[2][0]
+    first4 = hand[3][0]
+    for i in hand:
+        if i[0] == first1:
+            c1 += 1
+        if i[0] == first2:
+            c2 += 1
+        if i[0] == first3:
+            c3 += 1
+        if i[0] == first4:
+            c4 += 1
+    if c1 == 2 or c2 == 2 or c3 == 2 or c4 == 2:
+        return True
+    return False 
+
+
 
 
 def is_straight(hand):
@@ -108,17 +132,19 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     # best hand of these 3 would be a straight flush with the return value 3
     if is_flush(hand) and is_straight(hand):
-        return 5
+        return 6
      # the second best would be a flush with the return value 2
     if is_flush(hand):
-        return 4
+        return 5
     # third would be a straight with the return value 1
     if is_straight(hand):
-        return 3
+        return 4
      # any other hand would be the fourth best with the return value 0
     if is_fourofkind(hand):
-        return 2
+        return 3
     if is_threeofkind(hand):
+        return 2
+    if is_onepair(hand):
         return 1
     return 0
 def poker(hands):

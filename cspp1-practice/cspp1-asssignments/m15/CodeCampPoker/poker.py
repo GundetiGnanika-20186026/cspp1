@@ -8,11 +8,11 @@ def is_fourofkind(hand):
 	first1 = hand[0][0]
 	first2 = hand[1][0]
 	for i in hand:
-		if i[0] == first1
+		if i[0] == first1:
 		    c1 += 1
-		if i[0] == first2
+		if i[0] == first2:
 		    c2 += 1
-    if c1 == 4 or c2 == 4
+    if c1 == 4 or c2 == 4:
         return True
     return False
 

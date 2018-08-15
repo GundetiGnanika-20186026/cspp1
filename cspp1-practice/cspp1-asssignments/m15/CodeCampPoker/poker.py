@@ -56,6 +56,11 @@ def is_onepair(hand):
     if c1 == 2 or c2 == 2 or c3 == 2 or c4 == 2:
         return True
     return False 
+def is_fullhouse(hand):
+    '''main function for full house'''
+    if is_onepair(hand) and is_threeofkind(hand):
+        return True
+    return False
 
 
 
@@ -132,14 +137,16 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     # best hand of these 3 would be a straight flush with the return value 3
     if is_flush(hand) and is_straight(hand):
-        return 6
+        return 7
      # the second best would be a flush with the return value 2
     if is_flush(hand):
-        return 5
+        return 6
     # third would be a straight with the return value 1
     if is_straight(hand):
-        return 4
+        return 5
      # any other hand would be the fourth best with the return value 0
+    if is_fullhouse(hand):
+        return 4
     if is_fourofkind(hand):
         return 3
     if is_threeofkind(hand):

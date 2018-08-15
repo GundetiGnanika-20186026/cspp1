@@ -3,15 +3,16 @@
     Date:14 August 2018
 '''
 def is_fourofkind(hand):
-	c1 = 0
-	c2 = 0
-	first1 = hand[0][0]
-	first2 = hand[1][0]
-	for i in hand:
-		if i[0] == first1:
-		    c1 += 1
-		if i[0] == first2:
-		    c2 += 1
+    '''function for four of a kind'''
+    c1 = 0
+    c2 = 0
+    first1 = hand[0][0]
+    first2 = hand[1][0]
+    for i in hand:
+        if i[0] == first1:
+            c1 += 1
+        if i[0] == first2:
+            c2 += 1
     if c1 == 4 or c2 == 4:
         return True
     return False
@@ -98,7 +99,7 @@ def hand_rank(hand):
         return 1
      # any other hand would be the fourth best with the return value 0
    # if is_fourofkind(hand):
-    	#return 1
+        #return 1
     return 0
 def poker(hands):
     '''

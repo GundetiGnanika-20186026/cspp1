@@ -2,69 +2,6 @@
     Author:Gnanika
     Date:14 August 2018
 '''
-def is_fourofkind(hand):
-    '''function for four of a kind'''
-    c1 = 0
-    c2 = 0
-    first1 = hand[0][0]
-    first2 = hand[1][0]
-    for i in hand:
-        if i[0] == first1:
-            c1 += 1
-        if i[0] == first2:
-            c2 += 1
-    if c1 == 4 or c2 == 4:
-        return True
-    return False
-def is_threeofkind(hand):
-    '''main function for three of a kind'''
-    c1 = 0
-    c2 = 0
-    c3 = 0
-    first1 = hand[0][0]
-    first2 = hand[1][0]
-    first3 = hand[2][0]
-    for i in hand:
-        if i[0] == first1:
-            c1 += 1
-        if i[0] == first2:
-            c2 += 1
-        if i[0] == first3:
-            c3 += 1
-    if c1 == 3 or c2 == 3 or c3 == 3:
-        return True
-    return False
-def is_onepair(hand):
-    '''main function for one pair'''
-    c1 = 0
-    c2 = 0
-    c3 = 0
-    c4 = 0
-    first1 = hand[0][0]
-    first2 = hand[1][0]
-    first3 = hand[2][0]
-    first4 = hand[3][0]
-    for i in hand:
-        if i[0] == first1:
-            c1 += 1
-        if i[0] == first2:
-            c2 += 1
-        if i[0] == first3:
-            c3 += 1
-        if i[0] == first4:
-            c4 += 1
-    if c1 == 2 or c2 == 2 or c3 == 2 or c4 == 2:
-        return True
-    return False 
-def is_fullhouse(hand):
-    '''main function for full house'''
-    if is_onepair(hand) and is_threeofkind(hand):
-        return True
-    return False
-
-
-
-
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -88,6 +25,19 @@ def is_straight(hand):
         if sequence[i:i+5] == ''.join(list_1):
             return True
     return False
+#################################### or##############################################
+   '''
+    string_values = "--23456789TJQKA"
+    hand_values = []
+    for i in hand:
+        hand_values.append(string_values.index(i[0]))
+    hand_values.sort()
+    for i in range(len(hand_values)-1):
+        if hand_values[i]-hand_values[i+1] != -1:
+            return False
+    return True
+    '''
+#####################################################################################
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
@@ -113,6 +63,117 @@ def is_flush(hand):
     if count_dimd == 5 or count_spade == 5 or count_clubs == 5 or count_hearts == 5:
         return True
     return False
+######################################### or #######################################
+    '''
+    values_set = set({})
+    for i in hand:
+        values_set.add(i[1])
+    return len(values_set) == 1
+    '''
+#######################################################################################
+def is_fourofkind(hand):
+    '''function for four of a kind'''
+    c1 = 0
+    c2 = 0
+    first1 = hand[0][0]
+    first2 = hand[1][0]
+    for i in hand:
+        if i[0] == first1:
+            c1 += 1
+        if i[0] == first2:
+            c2 += 1
+    if c1 == 4 or c2 == 4:
+        return True
+    return False
+######################################### or #########################################
+    '''
+    hand_values = [f_1 for f_1, s in hand]
+    set_val = set(hand_values)
+    if len(set_val) != 2:
+        return False
+    for f_1 in set_val:
+        if hand_values.count(f_1) == 4:
+            return True
+    return False
+    '''
+###################################################################################
+
+def is_threeofkind(hand):
+    '''main function for three of a kind'''
+    c1 = 0
+    c2 = 0
+    c3 = 0
+    first1 = hand[0][0]
+    first2 = hand[1][0]
+    first3 = hand[2][0]
+    for i in hand:
+        if i[0] == first1:
+            c1 += 1
+        if i[0] == first2:
+            c2 += 1
+        if i[0] == first3:
+            c3 += 1
+    if c1 == 3 or c2 == 3 or c3 == 3:
+        return True
+    return False
+############################################## or ###########################################
+    '''
+    hand_values = [f_1 for f_1, s in hand]
+    set_val = set(hand_values)
+    if len(set_val) <= 2:
+        return False
+    for f_1 in set_val:
+        if hand_values.count(f_1) == 3:
+            return True
+    return False
+    '''
+#############################################################################################
+def is_fullhouse(hand):
+    '''main function for full house'''
+    if is_onepair(hand) and is_threeofkind(hand):
+        return True
+    return False
+def is_onepair(hand):
+    '''main function for one pair'''
+    c1 = 0
+    c2 = 0
+    c3 = 0
+    c4 = 0
+    first1 = hand[0][0]
+    first2 = hand[1][0]
+    first3 = hand[2][0]
+    first4 = hand[3][0]
+    for i in hand:
+        if i[0] == first1:
+            c1 += 1
+        if i[0] == first2:
+            c2 += 1
+        if i[0] == first3:
+            c3 += 1
+        if i[0] == first4:
+            c4 += 1
+    if c1 == 2 or c2 == 2 or c3 == 2 or c4 == 2:
+        return True
+    return False
+################################################ or ##################################
+'''
+hand_values = [f_1 for f_1, s in hand]
+set_val = set(hand_values)
+twopairs = [f_1 for f_1 in set_val if hand_values.count(f_1) == 2]
+if len(twopairs) != 1:
+    return False
+return True
+'''
+###################################################################################
+def is_twopair(hand):
+    '''function for two pair'''
+    hand_values = [f_1 for f_1, s in hand]
+    set_val = set(hand_values)
+    twopairs = [f_1 for f_1 in se_val if hand_values.count(f_1) == 2]
+    if len(twopairs) != 2:
+        return False
+    return True
+     
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -137,19 +198,21 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     # best hand of these 3 would be a straight flush with the return value 3
     if is_flush(hand) and is_straight(hand):
-        return 7
+        return 8
      # the second best would be a flush with the return value 2
     if is_flush(hand):
-        return 6
+        return 7
     # third would be a straight with the return value 1
     if is_straight(hand):
-        return 5
+        return 6
      # any other hand would be the fourth best with the return value 0
+    if is_fourofkind(hand):
+        return 5
     if is_fullhouse(hand):
         return 4
-    if is_fourofkind(hand):
-        return 3
     if is_threeofkind(hand):
+        return 3
+    if is_twopair(hand):
         return 2
     if is_onepair(hand):
         return 1

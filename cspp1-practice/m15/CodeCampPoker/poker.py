@@ -2,12 +2,14 @@
     Author:Gnanika
     Date:14 August 2018
 '''
+'''
 def is_fiveofkind(hand):
-    ''' five of kind main function'''
+    ''' five of kind main function '''
     values_set = set({})
     for i in hand:
         values_set.add(i[0])
     return len(values_set) == 1
+'''
 
 def is_straight(hand):
     '''
@@ -140,7 +142,7 @@ def is_fullhouse(hand):
     return False
 def is_onepair(hand):
     '''main function for one pair'''
-    c1 = 0
+   ''' c1 = 0
     c2 = 0
     c3 = 0
     c4 = 0
@@ -160,15 +162,16 @@ def is_onepair(hand):
     if c1 == 2 or c2 == 2 or c3 == 2 or c4 == 2:
         return True
     return False
+    '''
 ################################################ or ##################################
-'''
-hand_values = [f_1 for f_1, s in hand]
-set_val = set(hand_values)
-twopairs = [f_1 for f_1 in set_val if hand_values.count(f_1) == 2]
-if len(twopairs) != 1:
-    return False
-return True
-'''
+
+    hand_values = [f_1 for f_1, s in hand]
+    set_val = set(hand_values)
+    twopairs = [f_1 for f_1 in set_val if hand_values.count(f_1) == 2]
+    if len(twopairs) != 1:
+        return False
+    return True
+
 ###################################################################################
 def is_twopair(hand):
     '''function for two pair'''
@@ -201,9 +204,10 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     # best hand of these 3 would be a straight flush with the return value 3
+    '''
     if is_fiveofkind(hand):
         return 9
-
+    '''
     if is_flush(hand) and is_straight(hand):
         return 8
      # the second best would be a flush with the return value 2

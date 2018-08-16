@@ -142,7 +142,7 @@ def is_fullhouse(hand):
     return False
 def is_onepair(hand):
     '''main function for one pair'''
-   ''' c1 = 0
+''' c1 = 0
     c2 = 0
     c3 = 0
     c4 = 0

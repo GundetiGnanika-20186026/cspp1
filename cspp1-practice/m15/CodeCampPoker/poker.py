@@ -164,14 +164,12 @@ def is_onepair(hand):
     return False
     '''
 ################################################ or ##################################
-
     hand_values = [f_1 for f_1, s in hand]
     set_val = set(hand_values)
     twopairs = [f_1 for f_1 in set_val if hand_values.count(f_1) == 2]
     if len(twopairs) != 1:
         return False
     return True
-
 ###################################################################################
 def is_twopair(hand):
     '''function for two pair'''

@@ -17,7 +17,7 @@ def is_flush(hand):
     for i in hand:
         values_set.append(i[1])
     return len(set(values_set)) == 1
-def kind(ranks,num):
+def kind(ranks, num):
     '''common function for 3,4 of a kind'''
     for i in ranks:
         if ranks.count(i) == num:

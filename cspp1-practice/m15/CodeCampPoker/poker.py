@@ -2,6 +2,15 @@
     Author:Gnanika
     Date:14 August 2018
 '''
+def is_fiveofkind(hand):
+	''' five of kind main function'''
+	
+	values_set = set({})
+    for i in hand:
+        values_set.add(i[0])
+    return len(values_set) == 1
+
+
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -194,6 +203,9 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     # best hand of these 3 would be a straight flush with the return value 3
+    if is_fiveofkind(hand):
+    	return 9
+
     if is_flush(hand) and is_straight(hand):
         return 8
      # the second best would be a flush with the return value 2

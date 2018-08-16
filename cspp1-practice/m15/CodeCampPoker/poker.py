@@ -162,7 +162,7 @@ def is_onepair(hand):
     if c1 == 2 or c2 == 2 or c3 == 2 or c4 == 2:
         return True
     return False
-    '''
+'''
 ################################################ or ##################################
     hand_values = [f_1 for f_1, s in hand]
     set_val = set(hand_values)

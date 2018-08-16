@@ -4,7 +4,7 @@
 '''
 '''
 def is_fiveofkind(hand):
-    ''' five of kind main function '''
+    five of kind main function 
     values_set = set({})
     for i in hand:
         values_set.add(i[0])

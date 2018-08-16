@@ -17,7 +17,6 @@ def is_flush(hand):
     for i in hand:
         values_set.append(i[1])
     return len(set(values_set)) == 1
-
 def kind(ranks,num):
     '''common function for 3,4 of a kind'''
     for i in ranks:
@@ -25,7 +24,7 @@ def kind(ranks,num):
             return i
 def is_two_pair(ranks):
     '''function for two pair '''
-    high_rep = kind(ranks , 2)
+    high_rep = kind(ranks, 2)
     low_rep = kind(sorted(ranks), 2)
     if high_rep != low_rep:
         return high_rep, low_rep, ranks

@@ -3,13 +3,11 @@
     Date:14 August 2018
 '''
 def is_fiveofkind(hand):
-	''' five of kind main function'''
-	
-	values_set = set({})
+    ''' five of kind main function'''
+    values_set = set({})
     for i in hand:
         values_set.add(i[0])
     return len(values_set) == 1
-
 
 def is_straight(hand):
     '''
@@ -204,7 +202,7 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     # best hand of these 3 would be a straight flush with the return value 3
     if is_fiveofkind(hand):
-    	return 9
+        return 9
 
     if is_flush(hand) and is_straight(hand):
         return 8

@@ -25,8 +25,8 @@ def kind(ranks,num):
             return i
 def is_two_pair(ranks):
     '''function for two pair '''
-    high_rep = kind(ranks ,2)
-    low_rep = kind(sorted(ranks),2)
+    high_rep = kind(ranks , 2)
+    low_rep = kind(sorted(ranks), 2)
     if high_rep != low_rep:
         return high_rep, low_rep, ranks
 def hand_rank(hand):

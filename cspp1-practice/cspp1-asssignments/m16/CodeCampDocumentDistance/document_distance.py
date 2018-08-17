@@ -35,7 +35,7 @@ def similarity(dict1, dict2):
     doc_1 = dict1.lower()
     doc_2 = dict2.lower()
     doc_11 = ''
-    doc_22 = ''    
+    doc_22 = ''
     for i in doc_1:
         if 'a' <= i <= 'z' or i == ' ':
             doc_11 += i
@@ -49,17 +49,17 @@ def similarity(dict1, dict2):
     for i in list_samp:
         if i in stop_words:
             list_1.remove(i)
-    list_samp = list_2[:] 
+    list_samp = list_2[:]
     for i in list_samp:
         if i in stop_words:
-            list_2.remove(i) 
+            list_2.remove(i)
     finaldict = wordfrequency(list_1, list_2)
     numerator = 0
     sum1 = 0
     sum2 = 0
     for i in finaldict:
         numerator = numerator + (finaldict[i][0] * finaldict[i][1])
-        sum1 = sum1 + (finaldict[i][0]**2) 
+        sum1 = sum1 + (finaldict[i][0]**2)
         sum2 = sum2 + (finaldict[i][1]**2)
     similarity = numerator/(math.sqrt(sum1) * math.sqrt(sum2))
     return similarity

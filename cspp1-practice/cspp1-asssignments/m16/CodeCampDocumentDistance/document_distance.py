@@ -33,14 +33,14 @@ def similarity(dict1, dict2):
     '''
     list_1 = []
     list_2 = []
-    doc_1 = dict1.lower()
-    doc_2 = dict2.lower()
+    dict1 = dict1.lower()
+    dict2 = dict2.lower()
     doc_11 = ''
     doc_22 = ''
-    for i in doc_1:
+    for i in dict1:
         if 'a' <= i <= 'z' or i == ' ':
             doc_11 += i
-    for i in doc_2:
+    for i in dict2:
         if 'a' <= i <= 'z' or i == ' ':
             doc_22 += i
     list_1 = doc_11.split()

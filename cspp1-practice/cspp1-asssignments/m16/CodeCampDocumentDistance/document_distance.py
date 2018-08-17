@@ -55,7 +55,6 @@ def similarity(dict1, dict2):
         if i in stop_words:
             list_2.remove(i) 
     finaldict = wordfrequency(list_1,list_2)
-    print(sorted(finaldict.keys()))
     numerator = 0
     sum1 = 0
     sum2 = 0

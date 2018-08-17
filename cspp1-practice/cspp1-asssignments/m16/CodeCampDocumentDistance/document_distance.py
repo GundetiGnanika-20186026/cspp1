@@ -64,7 +64,7 @@ def similarity(dict1, dict2):
         sum2 += (finaldict[i][1]**2)
     answer = numerator/(math.sqrt(sum1) * math.sqrt(sum2))
     return answer
-def load_stopwords(filename):
+def load_stopwords():
     '''
         loads stop words from a file and returns a dictionary
     '''

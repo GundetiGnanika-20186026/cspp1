@@ -19,13 +19,13 @@ def wordfrequency(list_1,list_2):
             wordf2[i] = 1
     for i in wordf1:
         if i in wordf2:
-            adict[i] = [wordf1[i],wordf2[i]]
+            adict[i] = [wordf1[i], wordf2[i]]
         else:
-            adict[i] = [wordf1[i],0]
+            adict[i] = [wordf1[i], 0]
     for i in wordf2:
         if i not in adict:
-            adict[i] = [0,wordf2[i]]
-    return adict
+            adict[i] = [0, wordf2[i]]
+    print(adict)
 
 def similarity(dict1, dict2):
     '''

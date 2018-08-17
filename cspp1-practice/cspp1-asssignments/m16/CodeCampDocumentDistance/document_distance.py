@@ -25,7 +25,7 @@ def wordfrequency(list_1,list_2):
     for i in wordf2:
         if i not in adict:
             adict[i] = [0, wordf2[i]]
-    print(adict)
+    return adict
 
 def similarity(dict1, dict2):
     '''
@@ -51,6 +51,7 @@ def similarity(dict1, dict2):
             if i == j:
                 list_2.remove(j) 
     finaldict = wordfrequency(list_1,list_2)
+    print(finaldict)
     numerator = 0
     sum1 = 0
     sum2 = 0

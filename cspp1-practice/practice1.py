@@ -35,8 +35,11 @@ def create_social_network(data):
     for i in doc1:
         li_st = i.split(" follows ")
         li_st2=li_st[1].split(",")
-    print(li_st)
-    print(li_st2)
+        if li_st[0] in adict:
+            adict.append(li_st2)
+        else:
+            adict[li_st[0]] = li_st2
+    print(adict)
     
     '''li_st2 = []
     for i in li_st:

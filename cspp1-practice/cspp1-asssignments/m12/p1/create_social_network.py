@@ -38,6 +38,8 @@ def create_social_network(data):
     li_st = data.splitlines()
     for i in li_st:
         li_st2 = i.split(" follows ")
+        if li_st[0].endswith("!"):
+            return adict
         li_st3 = li_st2[1].split(",")
         if li_st2[0] in adict:
             adict[li_st2[0]].append[li_st3]

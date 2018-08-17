@@ -4,6 +4,7 @@ Date: 17 August 2018
 '''
 import math
 def wordfrequency(list_1, list_2):
+    '''converting into dictionary with frequencies'''
     wordf1 = {}
     wordf2 = {}
     adict = {}

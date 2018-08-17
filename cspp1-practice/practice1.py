@@ -1,8 +1,3 @@
-'''
-    Author:Gnanika
-    Date:12 August 2018
-'''
-
 def create_social_network(data):
     '''
         The data argument passed to the function is a string
@@ -32,17 +27,17 @@ def create_social_network(data):
         Return a empty dictionary if the string format of the data is invalid
         Empty dictionary is not None, it is a dictionary with no keys
     '''
+    #print(data)
     adict = {}
+    li_st=[]
     li_st2=[]
-    k=[]
-    li_st = data.splitlines()
-    for i in li_st:
-        li_st2 = i.split(" follows ")
-        li_st3 = li_st2[1].split(",")
-        if li_st2[0] in adict:
-            adict[li_st2[0]].append[li_st3]
-        else:
-            adict[li_st2[0]]=li_st3
+    doc1 = data.splitlines()
+    for i in doc1:
+        li_st = i.split(" follows ")
+        li_st2=li_st[1].split(",")
+    print(li_st)
+    print(li_st2)
+    
     '''li_st2 = []
     for i in li_st:
         li_st2 = li_st2 + i.split("follows")

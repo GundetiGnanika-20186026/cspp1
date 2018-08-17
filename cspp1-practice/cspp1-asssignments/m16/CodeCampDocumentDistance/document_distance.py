@@ -45,7 +45,7 @@ def similarity(dict1, dict2):
             doc_22 += i
     list_1 = doc_11.split()
     list_2 = doc_22.split()
-    stop_words = load_stopwords("stopwords.txt")
+    stop_words = load_stopwords()
     list_samp = list_1[:]
     for i in list_samp:
         if i in stop_words:
@@ -68,6 +68,7 @@ def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
     '''
+    filename = "stopwords.txt"
     stopwords = {}
     with open(filename, 'r') as filename:
         for line in filename:

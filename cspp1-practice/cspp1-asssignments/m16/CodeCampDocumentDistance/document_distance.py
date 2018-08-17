@@ -38,9 +38,9 @@ def similarity(dict1, dict2):
     doc_11 = doc_1.split(" ")
     doc_22 = doc_2.split(" ")
     for i in doc_11:
-        list_1.append(i.strip().strip('.?,'))
+        list_1.append(i.strip().strip(".?,1234567890'"))
     for i in doc_22:
-        list_2.append(i.strip().strip('.?,'))
+        list_2.append(i.strip().strip(".?,1234567890'"))
     
     for i in load_stopwords("stopwords.txt"):
         for j in list_1:

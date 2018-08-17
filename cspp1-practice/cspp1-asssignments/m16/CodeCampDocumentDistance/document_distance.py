@@ -58,8 +58,8 @@ def similarity(dict1, dict2):
         numerator = numerator + (i[0]*i[1])
         sum1 = sum1 + (i[0]**2) 
         sum2 = sum2 + (i[1]**2)
-    denominator = math.sqrt(sum1) * math.sqrt(sum2)
-    similarity = numerator/denominator
+    similarity = numerator/(math.sqrt(sum1) * math.sqrt(sum2))
+    return similarity
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary

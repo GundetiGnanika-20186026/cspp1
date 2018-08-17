@@ -49,11 +49,11 @@ def similarity(dict1, dict2):
     list_samp = list_1[:]
     for i in list_samp:
         if i in stop_words:
-            list_1.remove(j)
+            list_1.remove(i)
     list_samp = list_2[:] 
     for i in list_samp:
         if i in stop_words:
-            list_2.remove(j) 
+            list_2.remove(i) 
     finaldict = wordfrequency(list_1,list_2)
     print(sorted(finaldict.keys()))
     numerator = 0

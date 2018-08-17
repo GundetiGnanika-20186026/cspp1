@@ -3,7 +3,7 @@ Author:Gnanika
 Date: 17 August 2018
 '''
 import math
-def wordfrequency(list_1,list_2):
+def wordfrequency(list_1, list_2):
     wordf1 = {}
     wordf2 = {}
     adict = {}
@@ -53,7 +53,7 @@ def similarity(dict1, dict2):
     for i in list_samp:
         if i in stop_words:
             list_2.remove(i) 
-    finaldict = wordfrequency(list_1,list_2)
+    finaldict = wordfrequency(list_1, list_2)
     numerator = 0
     sum1 = 0
     sum2 = 0

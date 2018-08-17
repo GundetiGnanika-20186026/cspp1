@@ -45,14 +45,15 @@ def similarity(dict1, dict2):
             doc_22 += i
     list_1 = doc_11.split()
     list_2 = doc_22.split()
-    for i in load_stopwords("stopwords.txt"):
-        for j in list_1:
-            if i == j:
-                list_1.remove(j) 
-    for i in load_stopwords("stopwords.txt"):
-        for j in list_2:
-            if i == j:
-                list_2.remove(j) 
+    stop_words = load_stopwords("stopwords.txt")
+    list_samp = list_1[:]
+    for i in list_samp:
+        if i in stop_words:
+            list_1.remove(j)
+    list_samp = list_2[:] 
+    for i in list_samp:
+        if i in stop_words:
+            list_2.remove(j) 
     finaldict = wordfrequency(list_1,list_2)
     print(sorted(finaldict.keys()))
     numerator = 0

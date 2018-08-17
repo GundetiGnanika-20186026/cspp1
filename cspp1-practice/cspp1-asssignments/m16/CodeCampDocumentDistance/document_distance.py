@@ -35,13 +35,16 @@ def similarity(dict1, dict2):
     list_2 = []
     doc_1 = dict1.lower()
     doc_2 = dict2.lower()
-    doc_11 = doc_1.split(" ")
-    doc_22 = doc_2.split(" ")
-    for i in doc_11:
-        list_1.append(i.strip().strip(".?,1234567890\'"))
-    for i in doc_22:
-        list_2.append(i.strip().strip(".?,1234567890\'"))
-    
+    doc_11 = ''
+    doc_22 = ''    
+    for i in doc_1:
+        if 'a' <= i <= 'z' or i == ' ':
+            doc_11 += i
+    for i in doc_2:
+        if 'a' <= i <= 'z' or i == ' ':
+            doc_22 += i
+    list_1 = doc_11.split()
+    list_2 = doc_22.split()
     for i in load_stopwords("stopwords.txt"):
         for j in list_1:
             if i == j:

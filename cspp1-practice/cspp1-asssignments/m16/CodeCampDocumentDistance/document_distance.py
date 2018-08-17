@@ -1,5 +1,6 @@
 '''
-    Document Distance - A detailed description is given in the PDF
+Author:Gnanika
+Date: 17 August 2018
 '''
 import math
 def wordfrequency(list_1,list_2):
@@ -11,7 +12,6 @@ def wordfrequency(list_1,list_2):
             wordf1[i] += 1
         else:
             wordf1[i] = 1
-    
     for i in list_2:
         if i in wordf2:
             wordf2[i] += 1
@@ -26,7 +26,6 @@ def wordfrequency(list_1,list_2):
         if i not in adict:
             adict[i] = [0, wordf2[i]]
     return adict
-
 def similarity(dict1, dict2):
     '''
         Compute the document distance as given in the PDF
@@ -73,15 +72,12 @@ def load_stopwords(filename):
         for line in filename:
             stopwords[line.strip()] = 0
     return stopwords
-
 def main():
     '''
         take two inputs and call the similarity function
     '''
     input1 = str(input())
     input2 = str(input())
-    
-    
     print(similarity(input1, input2))
 
 if __name__ == '__main__':

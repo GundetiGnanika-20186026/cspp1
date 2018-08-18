@@ -61,8 +61,14 @@ def build_search_index(docs):
     '''
     
     # initialize a search index (an empty dictionary)
+    searchindex = {}
     list1 = sorted(word_list(docs))
-    print(list1)
+    for i in list1:
+        if i in searchindex:
+            searchindex[i] += 1
+        else:
+            searchindex[i] = 1
+    print(searchindex)
     
 
 

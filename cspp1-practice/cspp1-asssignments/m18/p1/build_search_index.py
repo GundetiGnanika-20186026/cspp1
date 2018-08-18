@@ -50,7 +50,6 @@ def word_list(text):
     for i in list2:
         if i in extra:
             list1.remove(i) 
-    print(list1)
     return list1
     #pass
 
@@ -60,8 +59,16 @@ def build_search_index(docs):
     '''
     
     # initialize a search index (an empty dictionary)
-    #searchindex = {}
+    searchindex = {}
     # iterate through all the docs
+    for i in range(len(docs)):
+        for j in docs:
+            if j not in searchindex:
+                searchindex[j] = [i]
+    print(searchindex)
+
+
+
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
 
@@ -97,10 +104,10 @@ def main():
         documents.append(input().lower())
         i += 1
     
-    word_list(documents)
+    build_search_index(documents)
     
     # call print to display the search index
-   # print_search_index(build_search_index(documents))
+    #print_search_index(build_search_index(documents))
 
 if __name__ == '__main__':
     main()

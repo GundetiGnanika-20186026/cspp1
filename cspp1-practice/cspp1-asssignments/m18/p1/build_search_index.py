@@ -40,19 +40,18 @@ def word_list(text):
         return a list of words
     '''
     list1=[]
-    
     for i in text:
     	i = i.lower()
     	if 'a' <= i <= 'z' and i == ' ':
             list1.append(text(i))
-   # print(list1)
+    print(list1)
     #pass
 
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
     '''
-    word_list(docs)
+    
     # initialize a search index (an empty dictionary)
     #searchindex = {}
     # iterate through all the docs
@@ -91,9 +90,9 @@ def main():
         documents.append(input())
         i += 1
     
-
+    word_list(documents)
     # call print to display the search index
-    print_search_index(build_search_index(documents))
+   ''' print_search_index(build_search_index(documents))'''
 
 if __name__ == '__main__':
     main()

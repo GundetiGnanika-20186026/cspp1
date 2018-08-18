@@ -45,7 +45,13 @@ def word_list(text):
             if 'a' <= j <= 'z' or j == ' ':
                 str1 += j
     list1=str1.split()
+    extra = load_stopwords("stopwords.txt")
+    list2 = list1[:]
+    for i in list2:
+        if i in extra:
+            list1.remove(i) 
     print(list1)
+    return list1
     #pass
 
 def build_search_index(docs):
@@ -94,7 +100,7 @@ def main():
     word_list(documents)
     
     # call print to display the search index
-    ''' print_search_index(build_search_index(documents))'''
+   # print_search_index(build_search_index(documents))
 
 if __name__ == '__main__':
     main()

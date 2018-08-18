@@ -20,8 +20,6 @@
         .
     }
 '''
-
-
 # helper function to load the stop words from a file
 def load_stopwords(filename):
     '''
@@ -45,7 +43,6 @@ def word_list(text):
         for j in i:
             if 'a' <= j <= 'z' or j == ' ':
                 str1 += j
-    
     list1=str1.split()
     extra = load_stopwords("stopwords.txt")
     list2 = list1[:]
@@ -53,8 +50,6 @@ def word_list(text):
         if i in extra:
             list1.remove(i) 
     return list1
-    
-
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
@@ -79,9 +74,8 @@ def build_search_index(docs):
         for j in i:
             if 'a' <= j <= 'z' or j == ' ':
                 str1 += j
-                i=str1.split()
+                i = str1.split()
     print(searchindex)
-
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
 
@@ -116,11 +110,8 @@ def main():
     for i in range(lines):
         documents.append(input().lower())
         i += 1
-    
     build_search_index(documents)
-    
     # call print to display the search index
     #print_search_index(build_search_index(documents))
-
 if __name__ == '__main__':
     main()

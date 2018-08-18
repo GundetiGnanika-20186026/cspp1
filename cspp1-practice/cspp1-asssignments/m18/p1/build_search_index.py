@@ -44,7 +44,8 @@ def word_list(text):
         for j in i:
             if 'a' <= j <= 'z' or j == ' ':
                 str1 += j
-    print(str1)
+    list1=list(str1)
+    print(list1)
     #pass
 
 def build_search_index(docs):

@@ -40,7 +40,7 @@ def search(search_index, query):
     str1 = ''
     for i in query:
         str1 += i.lower()
-    print(str1)
+    list1 = str1.split()
 
 
 def process_queries(search_index, queries):

@@ -66,9 +66,10 @@ def build_search_index(docs):
             if j not in searchindex:
                 searchindex[j] = [i]
     '''
-    for i in docs:
-        if i not in searchindex:
-                searchindex[i] = [index(i)]
+    i=0
+    for j in docs:
+        searchindex[j] = [i]
+        i=i+1
     print(searchindex)
 
 

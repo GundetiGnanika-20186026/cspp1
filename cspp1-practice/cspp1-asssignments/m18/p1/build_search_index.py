@@ -75,8 +75,9 @@ def build_search_index(docs):
         if i not in searchindex:
             searchindex[i] = j
             j = j + 1
+    for i in searchindex:
+        i.split()
     print(searchindex)
-    
 
 
 

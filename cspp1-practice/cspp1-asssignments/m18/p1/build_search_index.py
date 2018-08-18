@@ -45,7 +45,7 @@ def word_list(text):
     	i = i.lower()
     	if 'a' <= i <= 'z' and i == ' ':
             list1.append(text(i))
-    print(list1)
+   # print(list1)
     #pass
 
 def build_search_index(docs):
@@ -72,6 +72,7 @@ def print_search_index(index):
     '''
         print the search index
     '''
+    print(index)
     keys = sorted(index.keys())
     for key in keys:
         print(key, " - ", index[key])

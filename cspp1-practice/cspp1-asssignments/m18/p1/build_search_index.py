@@ -44,7 +44,7 @@ def word_list(text):
         for j in i:
             if 'a' <= j <= 'z' or j == ' ':
                 str1 += j
-    list1=list(str1)
+    list1=str1.split()
     print(list1)
     #pass
 

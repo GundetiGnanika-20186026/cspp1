@@ -88,7 +88,7 @@ def main():
     lines = int(input())
     # iterate through N times and add documents to the list
     for i in range(lines):
-        documents.append(lower(input()))
+        documents.append(input().lower())
         i += 1
     print(documents)
     #word_list(documents)

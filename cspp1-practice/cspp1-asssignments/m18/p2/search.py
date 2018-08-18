@@ -40,8 +40,7 @@ def search(search_index, query):
     query_list = []
     for i in query:
         query_list = i.split()
-
-    print(query_list)
+        print(query_list)
     # list1 = str1.split()
     # for i in list1:
     #     if i in search_index:

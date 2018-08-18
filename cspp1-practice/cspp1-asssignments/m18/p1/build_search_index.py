@@ -64,9 +64,9 @@ def build_search_index(docs):
     list1 = word_list(docs)
     adict={}
     for i in list1:
-        if i in adict
+        if i in adict:
             adict[i] += 1
-        else
+        else:
             adict[i] = [1]
     print(adict)
 

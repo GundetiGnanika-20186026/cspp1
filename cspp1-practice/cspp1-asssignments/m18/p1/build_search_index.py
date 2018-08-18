@@ -43,7 +43,7 @@ def word_list(text):
     for i in text:
     	i = i.lower()
     	if 'a' <= i <= 'z' and i == ' ':
-            list1.append(text(i))
+            list1.append(i)
     return list1
     #pass
 

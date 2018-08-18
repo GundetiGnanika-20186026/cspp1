@@ -76,7 +76,7 @@ def build_search_index(docs):
             searchindex[i] = j
             j = j + 1
     for i in searchindex:
-        i=i.split()
+        i=i.split(" ")
     print(searchindex)
 
 

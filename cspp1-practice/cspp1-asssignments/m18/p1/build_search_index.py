@@ -41,8 +41,9 @@ def word_list(text):
     '''
     str1 = ''
     for i in text:
-    	if 'a' <= i <= 'z' and i == ' ':
-            str1 += i
+    	for j in i:
+    	    if 'a' <= j <= 'z' and j == ' ':
+            str1 += j
     print(str1)
     #pass
 

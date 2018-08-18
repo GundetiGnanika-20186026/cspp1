@@ -60,17 +60,11 @@ def build_search_index(docs):
     
     # initialize a search index (an empty dictionary)
     searchindex = {}
-    # iterate through all the docs
-    ''' for i in range(len(docs)):
-        for j in docs:
-            if j not in searchindex:
-                searchindex[j] = [i]
-    '''
     i=0
     for j in docs:
-        searchindex[j] = [i]
+        searchindex[j] = (i)
         i=i+1
-    print(searchindex)
+    
 
 
 

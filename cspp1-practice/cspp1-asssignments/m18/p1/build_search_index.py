@@ -39,15 +39,21 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    pass
+    list1=[]
+    text = text.lower()
+    for i in text:
+    	if 'a' <= i <= 'z' and i = ' '
+            list1.append(text(i))
+    print(list1)
+    #pass
 
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
     '''
-
+    word_list(docs)
     # initialize a search index (an empty dictionary)
-
+    #searchindex = {}
     # iterate through all the docs
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
@@ -68,7 +74,7 @@ def print_search_index(index):
     keys = sorted(index.keys())
     for key in keys:
         print(key, " - ", index[key])
-
+   
 # main function that loads the docs from files
 def main():
     '''
@@ -82,7 +88,7 @@ def main():
     for i in range(lines):
         documents.append(input())
         i += 1
-    print(documents)
+    
 
     # call print to display the search index
     print_search_index(build_search_index(documents))

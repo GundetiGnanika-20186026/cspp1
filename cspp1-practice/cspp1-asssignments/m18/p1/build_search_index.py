@@ -42,7 +42,7 @@ def word_list(text):
     str1 = ''
     for i in text:
         for j in i:
-            if 'a' <= j <= 'z' and j == ' ':
+            if 'a' <= j <= 'z' or j == ' ':
                 str1 += j
     print(str1)
     #pass

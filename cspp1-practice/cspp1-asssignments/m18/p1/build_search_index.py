@@ -44,6 +44,7 @@ def word_list(text):
         for j in i:
             if 'a' <= j <= 'z' or j == ' ':
                 str1 += j
+    
     list1=str1.split()
     extra = load_stopwords("stopwords.txt")
     list2 = list1[:]
@@ -51,7 +52,7 @@ def word_list(text):
         if i in extra:
             list1.remove(i) 
     return list1
-    #pass
+    pass
 
 def build_search_index(docs):
     '''
@@ -59,13 +60,23 @@ def build_search_index(docs):
     '''
     
     # initialize a search index (an empty dictionary)
+    list1 = word_list(docs)
     searchindex = {}
     i=0
     for j in docs:
-        searchindex[j] = (i, )
-        i=i+1
+        searchindex[j] = (i,)
+        searchindex[j].split()
+        i = i+1
     print(searchindex)
-
+    '''
+    searchindex2={}
+    for i in searchindex:
+        
+        for j in list1:
+            if i == j:
+            if i not in searchindex2 :
+                searchindex2[j] =   
+    '''
 
 
     # keep track of doc_id which is the list index corresponding the document
@@ -88,7 +99,7 @@ def print_search_index(index):
     keys = sorted(index.keys())
     for key in keys:
         print(key, " - ", index[key])
-   
+    
 # main function that loads the docs from files
 def main():
     '''

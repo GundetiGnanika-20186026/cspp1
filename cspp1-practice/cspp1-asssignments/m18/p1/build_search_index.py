@@ -74,13 +74,13 @@ def build_search_index(docs):
     for i in docs:
         if i not in searchindex:
             searchindex[i] = j
-            j = j + 1
+    str1 = ''
     for i in searchindex:
-        searchindex[i].split(" ")
+        for j in i:
+            if 'a' <= j <= 'z' or j == ' ':
+                str1 += j
+                i=str1.split()
     print(searchindex)
-
-
-
 
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop

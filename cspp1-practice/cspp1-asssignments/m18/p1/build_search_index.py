@@ -21,6 +21,7 @@
     }
 '''
 
+
 # helper function to load the stop words from a file
 def load_stopwords(filename):
     '''
@@ -52,7 +53,7 @@ def word_list(text):
         if i in extra:
             list1.remove(i) 
     return list1
-    pass
+    
 
 def build_search_index(docs):
     '''
@@ -61,21 +62,15 @@ def build_search_index(docs):
     
     # initialize a search index (an empty dictionary)
     list1 = word_list(docs)
-    searchindex = {}
-    i=0
-    for j in docs:
-        searchindex[j.split(" ")] = (i,)
-        i = i+1
-    print(searchindex)
-    '''
-    searchindex2={}
-    for i in searchindex:
-        
-        for j in list1:
-            if i == j:
-            if i not in searchindex2 :
-                searchindex2[j] =   
-    '''
+    adict={}
+    for i in list1:
+        if i in adict
+            adict[i] += 1
+        else
+            adict[i] = [1]
+    print(adict)
+
+
 
 
     # keep track of doc_id which is the list index corresponding the document

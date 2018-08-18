@@ -87,11 +87,10 @@ def main():
     # iterate for n times
     lines = int(input())
     # iterate through N times and add documents to the list
-    print(lines)
     for i in range(lines):
-        documents.append(input())
+        documents.append(lower(input()))
         i += 1
-    
+    print(documents)
     #word_list(documents)
     
     # call print to display the search index

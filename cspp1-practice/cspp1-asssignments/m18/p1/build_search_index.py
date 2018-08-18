@@ -62,13 +62,12 @@ def build_search_index(docs):
     
     # initialize a search index (an empty dictionary)
     list1 = word_list(docs)
-    print(list1)
     adict = {}
     for i in list1:
         if i in adict:
             adict[i] += 1
         else:
-            adict[i] = [1]
+            adict[i] = 1
     print(adict)
 
 

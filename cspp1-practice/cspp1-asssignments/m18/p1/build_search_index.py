@@ -62,7 +62,8 @@ def build_search_index(docs):
     
     # initialize a search index (an empty dictionary)
     list1 = word_list(docs)
-    adict={}
+    print(list1)
+    adict = {}
     for i in list1:
         if i in adict:
             adict[i] += 1

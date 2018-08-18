@@ -39,11 +39,12 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    list1=[]
+    str1 = ''
     for i in text:
     	i = i.lower()
     	if 'a' <= i <= 'z' and i == ' ':
-            list1.append(i)
+            str1.append(i)
+    list1 = list(str1)
     return list1
     #pass
 

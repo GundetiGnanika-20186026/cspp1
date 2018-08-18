@@ -41,6 +41,7 @@ def search(search_index, query):
     for i in query:
         str1 += i.lower()
     list1 = str1.split()
+    print(list1)
 
 
 def process_queries(search_index, queries):

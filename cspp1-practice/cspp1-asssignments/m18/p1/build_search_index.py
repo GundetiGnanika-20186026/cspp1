@@ -41,7 +41,7 @@ def word_list(text):
     '''
     str1 = ''
     for i in text:
-    	i = i.lower()
+    	j = i.lower()
     	if 'a' <= i <= 'z' and i == ' ':
             str1.append(i)
     list1 = list(str1)
@@ -87,12 +87,13 @@ def main():
     # iterate for n times
     lines = int(input())
     # iterate through N times and add documents to the list
+    print(lines)
     for i in range(lines):
         documents.append(input())
         i += 1
     
-    word_list(documents)
-    print(documents)
+    #word_list(documents)
+    
     # call print to display the search index
     ''' print_search_index(build_search_index(documents))'''
 

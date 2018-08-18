@@ -39,7 +39,7 @@ def search(search_index, query):
     '''
     query=query.lower()
     query1=query.split()
-    print(query)
+    print(query1)
     pass
 
 def process_queries(search_index, queries):

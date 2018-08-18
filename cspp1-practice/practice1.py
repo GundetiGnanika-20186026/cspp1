@@ -34,12 +34,14 @@ def create_social_network(data):
     doc1 = data.splitlines()
     for i in doc1:
         li_st = i.split(" follows ")
+        if li_st[0].endswith("!"):
+            return adict
         li_st2=li_st[1].split(",")
         if li_st[0] in adict:
             adict.append(li_st2)
         else:
             adict[li_st[0]] = li_st2
-    print(adict)
+    
     
     '''li_st2 = []
     for i in li_st:

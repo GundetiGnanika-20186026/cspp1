@@ -49,6 +49,7 @@ def word_list(text):
     for i in list2:
         if i in extra:
             list1.remove(i) 
+    print(list1)
     return list1
 def build_search_index(docs):
     '''

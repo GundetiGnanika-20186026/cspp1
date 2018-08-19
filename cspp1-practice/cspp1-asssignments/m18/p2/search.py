@@ -44,7 +44,7 @@ def search(search_index, query):
     for i in query:
         if i in search_index:
                 
-                list2=list(search_index.values(i))
+                list2=list(search_index.get(i))
                 for j in range(len(list2)):
                     list1.add(list2[j][0][0])
     return list1

@@ -60,9 +60,9 @@ def build_search_index(docs):
     # clean up doc and tokenize to words list
     # add or update the words of the doc to the search index
     # return search index
-    list1 = []
+    
     for i, sentence in enumerate(docs):
-        print((i), sentence)
+        print(list1=list(i, sentence))
     #searchindex = {}
 
 

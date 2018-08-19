@@ -43,11 +43,11 @@ def search(search_index, query):
     query = query.split()
     for i in query:
         if i in search_index:
-                print(i)
-                #list2=list(search_index.values())
-                #for i in range(len(list2)):
-                   # list1.add(search_index[i][0][0])
-    #return list1
+                
+                list2=list(search_index.values(i))
+                for j in range(len(list2)):
+                    list1.add(list2[j][0][0])
+    return list1
             
 
 

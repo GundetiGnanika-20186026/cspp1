@@ -43,8 +43,8 @@ def search(search_index, query):
     query=query.split()
     for i in query:
         if i in search_index:
-            list1.add(search_index[i][0][0])
-    print(list1)
+            list1.add(search_index[i][0][0],search_index[i][1][0])
+    return list1
             
 
 
@@ -55,8 +55,8 @@ def process_queries(search_index, queries):
         print the results returned by search function
     '''
     for i in queries:
-        search(search_index, i)
-    
+        print(search(search_index, i))
+       
 
 def main():
     '''

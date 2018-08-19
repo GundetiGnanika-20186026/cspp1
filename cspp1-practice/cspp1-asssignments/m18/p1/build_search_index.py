@@ -49,33 +49,22 @@ def word_list(text):
     for i in list2:
         if i in extra:
             list1.remove(i) 
-    print(list1)
     return list1
 def build_search_index(docs):
     '''
         Process the docs step by step as given below
     '''
-    
     # initialize a search index (an empty dictionary)
-    searchindex = {}
-    list1 = sorted(word_list(docs))
-    for i in list1:
-        if i in searchindex:
-            searchindex[i] += 1
-        else:
-            searchindex[i] = 1
-    print(searchindex)
-  
-    
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
-
-        # clean up doc and tokenize to words list
-
-        # add or update the words of the doc to the search index
-
+    # clean up doc and tokenize to words list
+    # add or update the words of the doc to the search index
     # return search index
-    pass
+    #for i, sentence in enumerate(docs):
+        #print i, pet
+    #searchindex = {}
+
+
 
 # helper function to print the search index
 # use this to verify how the search index looks
@@ -101,7 +90,7 @@ def main():
     for i in range(lines):
         documents.append(input().lower())
         i += 1
-    build_search_index(documents)
+    print(documents)
     # call print to display the search index
     #print_search_index(build_search_index(documents))
 if __name__ == '__main__':

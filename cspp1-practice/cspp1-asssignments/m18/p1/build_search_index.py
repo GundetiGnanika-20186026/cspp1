@@ -62,7 +62,7 @@ def build_search_index(docs):
     # return search index
     list1 = []
     for i, sentence in enumerate(docs):
-        list1.append(i, sentence)
+    print(docs)
     #searchindex = {}
 
 

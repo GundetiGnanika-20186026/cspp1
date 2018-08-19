@@ -46,8 +46,8 @@ def search(search_index, query):
                 
                 list2=list(search_index.get(i))
                 print(list2)
-                for j in range(len(list2)):
-                    list1.add(list2[j][0][0])
+                for j in list2:
+                    list1.add(j[0])
     return list1
             
 

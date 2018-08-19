@@ -59,24 +59,14 @@ def build_search_index(docs):
     # initialize a search index (an empty dictionary)
     searchindex = {}
     list1 = sorted(word_list(docs))
-    '''for i in list1:
+    for i in list1:
         if i in searchindex:
             searchindex[i] += 1
         else:
             searchindex[i] = 1
     print(searchindex)
-    '''
-    j = 0
-    for i in docs:
-        if i not in searchindex:
-            searchindex[i] = j
-    str1 = ''
-    for i in searchindex:
-        for j in i:
-            if 'a' <= j <= 'z' or j == ' ':
-                str1 += j
-                i = str1.split()
-    print(searchindex)
+  
+    
     # keep track of doc_id which is the list index corresponding the document
     # hint: use enumerate to obtain the list index in the for loop
 

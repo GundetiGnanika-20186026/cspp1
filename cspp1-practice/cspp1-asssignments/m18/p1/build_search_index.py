@@ -60,8 +60,9 @@ def build_search_index(docs):
     # clean up doc and tokenize to words list
     # add or update the words of the doc to the search index
     # return search index
-    #for i, sentence in enumerate(docs):
-        #print i, pet
+    list1 = []
+    for i, sentence in enumerate(docs):
+        list1.append(i, sentence)
     #searchindex = {}
 
 
@@ -90,8 +91,8 @@ def main():
     for i in range(lines):
         documents.append(input().lower())
         i += 1
-    print(documents)
+    
     # call print to display the search index
-    #print_search_index(build_search_index(documents))
+    print_search_index(build_search_index(documents))
 if __name__ == '__main__':
     main()

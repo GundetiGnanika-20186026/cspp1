@@ -5,7 +5,7 @@ class Cipher:
 
     def __len__(self):
         count = 0
-        for i in self.text:
+        for _ in self.text:
             count += 1
         return count
 

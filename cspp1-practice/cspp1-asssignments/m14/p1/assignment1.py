@@ -25,3 +25,15 @@ class Cipher:
                 final_str += self.text[i]
 
         return final_str
+
+def main():
+    '''
+        main function
+    '''
+    data_input = input()
+    shift_number = int(input())
+    Cipher_obj = Cipher(data_input)
+    print(Cipher_obj.shift(shift_number))
+
+if __name__ == "__main__":
+    main()

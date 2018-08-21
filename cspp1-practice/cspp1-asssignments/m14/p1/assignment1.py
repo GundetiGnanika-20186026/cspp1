@@ -1,5 +1,10 @@
+'''
+Author:Gnanika
+Date:22 August 2018
+'''
 import string
 class Cipher:
+    '''class'''
     def __init__(self, text):
         '''method for creating an instance'''
         self.text = text

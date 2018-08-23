@@ -77,7 +77,7 @@ def read_matrix():
         return list1,range1[0],range1[1]
     else:
         print("Error: Invalid input for the matrix")
-        return None
+        return [],range1[0],range1[1]
        
 
 def main():
@@ -86,13 +86,12 @@ def main():
     
     # read matrix 2
     (matrix_2,row_2,column_2) = read_matrix()
-    
-
-    # add matrix 1 and matrix 2
-    print(add_matrix(matrix_1,matrix_2,row_1,column_1,row_2,column_2))
-    
-    # multiply matrix 1 and matrix 2
-    print(mult_matrix(matrix_1,matrix_2,row_1,column_1,row_2,column_2))
+    if not matrix_2 == []:
+        # add matrix 1 and matrix 2
+        print(add_matrix(matrix_1,matrix_2,row_1,column_1,row_2,column_2))
+        
+        # multiply matrix 1 and matrix 2
+        print(mult_matrix(matrix_1,matrix_2,row_1,column_1,row_2,column_2))
 
 if __name__ == '__main__':
     main()

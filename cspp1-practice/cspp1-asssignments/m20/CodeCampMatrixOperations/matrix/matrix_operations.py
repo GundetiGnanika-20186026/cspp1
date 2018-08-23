@@ -20,7 +20,6 @@ def mult_matrix(m_1, m_2, r_1, c_1, r_2, c_2):
     else:
         print("Error: Matrix shapes invalid for mult")
         return None        
-
 def add_matrix(m_1, m_2, r_1, c_1, r_2, c_2):
     '''
         check if the matrix shapes are similar
@@ -40,9 +39,6 @@ def add_matrix(m_1, m_2, r_1, c_1, r_2, c_2):
     else:
         print("Error: Matrix shapes invalid for addition")
         return None
-
-
-  
 def read_matrix():
     '''
         read the matrix dimensions from input
@@ -52,7 +48,6 @@ def read_matrix():
         error message should be "Error: Invalid input for the matrix"
 
     '''
-    
     dim_1 = input()
     dim_11 = dim_1.split(",")
     range1 = []
@@ -78,8 +73,6 @@ def read_matrix():
     else:
         print("Error: Invalid input for the matrix")
         return [],range1[0],range1[1]
-       
-
 def main():
     # read matrix 1
     (matrix_1, row_1, column_1) = read_matrix()

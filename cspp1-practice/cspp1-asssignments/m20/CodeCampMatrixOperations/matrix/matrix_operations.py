@@ -72,9 +72,8 @@ def read_matrix():
             c_1 = c_1 + 1
     if c_1 == range1[0] * range1[1]:
         return list1,range1[0],range1[1]
-    else:
-        print("Error: Invalid input for the matrix")
-        return [],range1[0],range1[1]
+    print("Error: Invalid input for the matrix")
+    return [],range1[0],range1[1]
 def main():
     '''main func_1tion'''
     # read matrix 1

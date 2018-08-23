@@ -21,9 +21,8 @@ def mult_matrix(m_1, m_2, r_1, c_1, r_2, c_2):
                 list1.append(sum_1)
             mulresult.append(list1)
         return mulresult
-    else:
-        print("Error: Matrix shapes invalid for mult")
-        return None        
+    print("Error: Matrix shapes invalid for mult")
+    return None        
 def add_matrix(m_1, m_2, r_1, c_1, r_2, c_2):
     '''
         check if the matrix shapes are similar
@@ -40,8 +39,7 @@ def add_matrix(m_1, m_2, r_1, c_1, r_2, c_2):
                 list1.append(m_1[i][j] + m_2[i][j])
             addition.append(list1)
         return addition
-    else:
-        print("Error: Matrix shapes invalid for addition")
+    print("Error: Matrix shapes invalid for addition")
         return None
 def read_matrix():
     '''
@@ -74,8 +72,7 @@ def read_matrix():
             c = c + 1
     if c == range1[0] * range1[1]:
         return list1,range1[0],range1[1]
-    else:
-        print("Error: Invalid input for the matrix")
+    print("Error: Invalid input for the matrix")
         return [],range1[0],range1[1]
 def main():
     '''main function'''

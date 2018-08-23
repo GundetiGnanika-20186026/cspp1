@@ -63,7 +63,7 @@ def read_matrix():
         row = element.split()
         rowlist = []
         for k in row:
-            j = int(k)
+            j = int(i)
             rowlist.append(j)
         list1 += [rowlist]
     for i in list1:

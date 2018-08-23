@@ -56,9 +56,8 @@ def read_matrix():
     list1 = []
     c_1 = 0
     for i in dim_11:
-        i = int(i)
-        range1.append(i)
-    
+        j = int(i)
+        range1.append(j)
     for i in range(range1[0]):
         element = input()
         row = element.split()

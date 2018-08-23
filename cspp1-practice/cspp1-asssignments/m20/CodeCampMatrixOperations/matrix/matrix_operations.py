@@ -54,7 +54,7 @@ def read_matrix():
     '''
     
     dim_1 = input()
-    dim_11=dim_1.split(",")
+    dim_11 = dim_1.split(",")
     range1 = []
     list1 = []
     c = 0
@@ -63,16 +63,16 @@ def read_matrix():
         range1.append(i)
     
     for i in range(range1[0]):
-        element=input()
+        element = input()
         row = element.split()
-        rowlist=[]
+        rowlist = []
         for i in row:
             i = int(i)
             rowlist.append(i)
         list1 += [rowlist]
     for i in list1:
         for j in i:
-            c=c+1
+            c = c + 1
     if c == range1[0] * range1[1]:
         return list1,range1[0],range1[1]
     else:
@@ -82,16 +82,16 @@ def read_matrix():
 
 def main():
     # read matrix 1
-    (matrix_1,row_1,column_1) = read_matrix()
+    (matrix_1, row_1, column_1) = read_matrix()
     
     # read matrix 2
-    (matrix_2,row_2,column_2) = read_matrix()
+    (matrix_2, row_2, column_2) = read_matrix()
     if not matrix_2 == []:
         # add matrix 1 and matrix 2
-        print(add_matrix(matrix_1,matrix_2,row_1,column_1,row_2,column_2))
+        print(add_matrix(matrix_1, matrix_2, row_1, column_1, row_2, column_2))
         
         # multiply matrix 1 and matrix 2
-        print(mult_matrix(matrix_1,matrix_2,row_1,column_1,row_2,column_2))
+        print(mult_matrix(matrix_1, matrix_2, row_1, column_1, row_2, column_2))
 
 if __name__ == '__main__':
     main()

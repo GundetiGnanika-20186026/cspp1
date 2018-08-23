@@ -1,4 +1,4 @@
-def mult_matrix(m1, m2, r1, c1, r2, c2):
+def mult_matrix(m_1, m_2, r_1, c_1, r_2, c_2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -6,22 +6,22 @@ def mult_matrix(m1, m2, r1, c1, r2, c2):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    if  c1 == r2:
+    if  c_1 == r_2:
         mulresult = []
-        for i in range(r1):
+        for i in range(r_1):
             list1 = []
-            for j in range(r1):
-                sum1 = 0
-                for k in range(c1):
-                    sum1 = sum1 + (m1[i][k] * m2[k][j])
-                list1.append(sum1)
+            for j in range(r_1):
+                sum_1 = 0
+                for k in range(c_1):
+                    sum_1 = sum_1 + (m_1[i][k] * m_2[k][j])
+                list1.append(sum_1)
             mulresult.append(list1)
         return mulresult
     else:
         print("Error: Matrix shapes invalid for mult")
         return None        
 
-def add_matrix(m1, m2, r1, c1, r2, c2):
+def add_matrix(m_1, m_2, r_1, c_1, r_2, c_2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -29,12 +29,12 @@ def add_matrix(m1, m2, r1, c1, r2, c2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    if r1 == r2 and c1 == c2:
+    if r_1 == r_2 and c_1 == c_2:
         addition = []
-        for i in range(r1):
+        for i in range(r_1):
             list1 = []
-            for j in range(c1):
-                list1.append(m1[i][j] + m2[i][j])
+            for j in range(c_1):
+                list1.append(m_1[i][j] + m_2[i][j])
             addition.append(list1)
         return addition
     else:
@@ -53,12 +53,12 @@ def read_matrix():
 
     '''
     
-    dim1 = input()
-    dim11=dim1.split(",")
+    dim_1 = input()
+    dim_11=dim_1.split(",")
     range1 = []
     list1 = []
     c = 0
-    for i in dim11:
+    for i in dim_11:
         i = int(i)
         range1.append(i)
     

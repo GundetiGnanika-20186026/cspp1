@@ -22,7 +22,7 @@ def mult_matrix(m_1, m_2, r_1, c_1, r_2, c_2):
             mulresult.append(list1)
         return mulresult
     print("Error: Matrix shapes invalid for mult")
-    return None        
+    return None
 def add_matrix(m_1, m_2, r_1, c_1, r_2, c_2):
     '''
         c_1hec_1k if the matrix shapes are similar

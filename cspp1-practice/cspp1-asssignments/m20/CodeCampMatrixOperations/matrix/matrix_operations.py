@@ -1,3 +1,7 @@
+'''
+Author:Gnanika
+Date:23 August 2018
+'''
 def mult_matrix(m_1, m_2, r_1, c_1, r_2, c_2):
     '''
         check if the matrix1 columns = matrix2 rows

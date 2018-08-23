@@ -2,7 +2,7 @@
 Author:Gnanika
 Date:23 August 2018
 '''
-def mult_matrix(m_1, m_2, r_1, c_1, r_2, c_2):
+def mult_matrix(m_1, m_2, r_1, c_1, r_2):
     '''
         c_1hec_1k if the matrix1 c_1olumns = matrix2 rows
         mult the matric_1es and return the result matrix
@@ -62,8 +62,8 @@ def read_matrix():
         element = input()
         row = element.split()
         rowlist = []
-        for i in row:
-            j = int(i)
+        for k in row:
+            j = int(k)
             rowlist.append(j)
         list1 += [rowlist]
     for i in list1:

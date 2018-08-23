@@ -78,6 +78,7 @@ def read_matrix():
         print("Error: Invalid input for the matrix")
         return [],range1[0],range1[1]
 def main():
+    '''main function'''
     # read matrix 1
     (matrix_1, row_1, column_1) = read_matrix()
     # read matrix 2

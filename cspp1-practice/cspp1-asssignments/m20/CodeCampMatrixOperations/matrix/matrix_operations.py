@@ -83,7 +83,7 @@ def main():
         # add matrix 1 and matrix 2
         print(add_matrix(matrix_1, matrix_2, row_1, c_1olumn_1, row_2, c_1olumn_2))
         # multiply matrix 1 and matrix 2
-        print(mult_matrix(matrix_1, matrix_2, row_1, c_1olumn_1, row_2, c_1olumn_2))
+        print(mult_matrix(matrix_1, matrix_2, row_1, c_1olumn_1, row_2))
 
 if __name__ == '__main__':
     main()

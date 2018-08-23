@@ -40,7 +40,7 @@ def add_matrix(m_1, m_2, r_1, c_1, r_2, c_2):
             addition.append(list1)
         return addition
     print("Error: Matrix shapes invalid for addition")
-        return None
+    return None
 def read_matrix():
     '''
         read the matrix dimensions from input

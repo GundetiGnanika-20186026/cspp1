@@ -17,7 +17,7 @@ def read_input():
                 o_count += 1
             if j == 'dot':
                 dot_count += 1
-            if j not in('x','o','dot'):
+            if j not in('x','o','.'):
                 return "invalid input"
     if x_count > o_count + 1 or o_count > x_count + 1 :
         return "invalid game"

@@ -1,6 +1,6 @@
 def horizontal(list1):
     for i in list1:
-        if i[0] == i[1] and i[1] == i[2]:
+        if i[0] == i[1] and i[0] == i[2]:
             return i[0]
     return False
 def vertical(list1):
@@ -10,7 +10,7 @@ def vertical(list1):
     return False
 def diagonal(list1):
     c = list1[1][1] 
-    if (list1[0][0] == c and c == list1[2][2]) or (list1[0][2] == c and c == list1[2][0]):
+    if (c == list1[0][0] and c == list1[2][2]) or (c == list1[0][2]and c == list1[2][0]):
         return list1[0][0]
     return False
 

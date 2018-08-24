@@ -21,7 +21,8 @@ def isvalidinput(list1):
 def checkgame(list1):
     '''checking weather the game is valid or not'''
     count = 0
-    for i in range(len(list1)):
+    a_1 = len(list1)
+    for i in range(a_1):
         if list1[i][0] == list1[i][1] and list1[i][1] == list1[i][2]:
             count += 1
     for i in range(len(list1)):

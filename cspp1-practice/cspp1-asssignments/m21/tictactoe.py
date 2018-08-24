@@ -1,56 +1,95 @@
-def horizontal(list1):
+def isvalidinput(list1):
+    x_sum = 0
+    o_sum = 0
+    sum = 0
     for i in list1:
-        if i[0] == i[1] and i[0] == i[2]:
-            return i[0]
-    return False
+        x_sum += i.count('x')
+        o_sum += i.count('o')
+        sum += i.count('o') + i.count('x') + i.count(".")
+    if sum != 9:
+        print("invalid input")
+        return  
+    if(x_sum - o_sum not in (0, 1, -1)):
+        print("invalid game")
+        return
+    return True
+
+def checkgame(list1):
+    count = 0
+    for i in range(len(list1)):
+        if list1[i][0] == list1[i][1] and list1[i][1] == list1[i][2]:
+            count += 1
+    for i in range(len(list1)):
+        if list1[0][i] == list1[1][i] and list1[1][i] == list1[2][i]:
+            count += 1 
+    if list1[0][0] == list1[1][1] and list1[1][1] == list1[2][2]:
+        count+= 1
+    if list1[0][2] == list1[1][1] and list1[1][1] == list1[2][0]:
+        count += 1
+    if count > 1:
+        print("invalid game")
+    else:
+        return True
+
+def horizontal(list1):
+    for i in range(len(list1)):
+        if list1[i][0] == list1[i][1] and list1[i][1] == list1[i][2]:
+            return list1[i][0]
+
 def vertical(list1):
-    for i in range(3):
+    for i in range(len(list1)):
         if list1[0][i] == list1[1][i] and list1[1][i] == list1[2][i]:
             return list1[0][i]
-    return False
+
 def diagonal(list1):
-    c = list1[1][1] 
-    if (c == list1[0][0] and c == list1[2][2]) or (c == list1[0][2]and c == list1[2][0]):
+    if list1[0][0] == list1[1][1] and list1[1][1] == list1[2][2]:
         return list1[0][0]
-    return False
-
-def read_input():
-    list1=[]
-    for i in range(3):
-        input1 = input().split()
-        list1.append(input1)
-    x_count = 0
-    o_count = 0
-    dot_count = 0
-    for i in list1:
-        for j in i:
-            if j == 'x':
-                x_count += 1
-            if j == 'o':
-                o_count += 1
-            if j == '.':
-                dot_count += 1
-            if j not in('x', 'o' ,'.'):
-                return "invalid input"
-    if x_count > o_count + 1 or o_count > x_count + 1:
-        return "invalid game"
-    return list1
+    if list1[0][2] == list1[1][1] and list1[1][1] == list1[2][0]:
+        return list1[0][2]
 
 
+def checkforwinner(list1):
+    winner =  horizontal(list1)
+    winner1 = vertical(list1)
+    winner2 = diagonal(list1)
 
-
-
-
-def main():
-    #read the input
-    list1 = read_input()
-    horizon = horizontal(list1)
-    verti = vertical(list1)
-    diag = diagonal(list1)
-    if  horizon == False and verti == False and diag == False:
-        print("draw")
-
+    if (winner and winner1) or (winner1 and winner2) or (winner and winner2):
+        return ("invalid game")
+        
+    if winner:
+        return winner
+    if winner1:
+        return winner1
+    if winner2:
+        return winner2
+    else:
+        return "draw"
     
 
+# def read_input():
+#     list1=[]
+#     for i in range(3):
+#         input1 = input().split()
+#         list1.append(input1)
+#     x_count = 0
+#     o_count = 0
+#     dot_count = 0
+#     for i in list1:
+#         for j in i:
+#             if j == 'x':
+#                 x_count += 1
+#             if j == 'o':
+#                 o_count += 1
+#             if j == '.':
+#                 dot_count += 1
+#             if j not in('x', 'o' ,'.'):
+#                 return "invalid input"
+def main():
+    #read the input
+    list1 = []
+    for i in range(3):
+        list1.append(input().split())
+    if isvalidinput(list1) and checkgame(list1):
+        print(checkforwinner(list1))
 if __name__ == '__main__':
     main()

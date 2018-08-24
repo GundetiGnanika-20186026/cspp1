@@ -43,17 +43,16 @@ def create_social_network(data):
             adict[li_st2[0]].append[li_st3]
         else:
             adict[li_st2[0]] = li_st3
-    '''li_st2 = []
-       for i in li_st:
-        li_st2 = li_st2 + i.split("follows")
-       #print(l2)
-       for j in li_st2[1:len(li_st2+1):2]:
-        #l2=j.split(":")
-        #l2[1] = l2[1].split(",")
-        k =k +list(j)
-      #print(k)
-        #adict[j[0]] = j[1]
-    '''
+    # li_st2 = []
+    #    for i in li_st:
+    #     li_st2 = li_st2 + i.split("follows")
+    #    #print(l2)
+    #    for j in li_st2[1:len(li_st2+1):2]:
+    #     #l2=j.split(":")
+    #     #l2[1] = l2[1].split(",")
+    #     k =k +list(j)
+    #   #print(k)
+    #     #adict[j[0]] = j[1]
     return adict
 def main():
     '''

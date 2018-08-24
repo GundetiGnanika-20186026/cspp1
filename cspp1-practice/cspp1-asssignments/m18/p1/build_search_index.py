@@ -1,3 +1,4 @@
+import collections
 '''
     Tiny Search Engine - Part 1 - Build a search index
 
@@ -65,6 +66,7 @@ def build_search_index(docs):
     searchindex = {}
     for i in range(len_docs):
     	docs[i]=word_list(docs[i])
+    	docs[i]=collections.counter(docs[i])
     	print(docs[i])
 
 

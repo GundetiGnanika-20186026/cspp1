@@ -41,9 +41,9 @@ def search(search_index, query):
     query = query.split()
     for i in query:
         if i in search_index:
-                list2 = list(search_index.get(i))
-                for j in list2:
-                    list1.add(j[0])
+            list2 = list(search_index.get(i))
+            for j in list2:
+                list1.add(j[0])
     return list1
 def process_queries(search_index, queries):
     '''
@@ -71,4 +71,3 @@ def main():
     process_queries(search_index, queries)
 if __name__ == '__main__':
     main()
-    

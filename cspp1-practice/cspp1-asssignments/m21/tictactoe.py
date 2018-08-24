@@ -38,7 +38,8 @@ def checkgame(list1):
         return True
 def horizontal(list1):
     '''horizontal check'''
-    for i in range(len(list1)):
+    a_1 = len(list1)
+    for i in range(a_1):
         if list1[i][0] == list1[i][1] and list1[i][1] == list1[i][2]:
             return list1[i][0]
 def vertical(list1):

@@ -2,7 +2,6 @@
     Author:Gnanika
     Date:12 August 2018
 '''
-
 def create_social_network(data):
     '''
         The data argument passed to the function is a string

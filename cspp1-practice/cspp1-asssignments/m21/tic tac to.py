@@ -15,7 +15,7 @@ def read_input():
                 x_count += 1
             if j == 'o':
                 o_count += 1
-            if j == 'dot':
+            if j == '.':
                 dot_count += 1
             if j not in('x','o','.'):
                 return "invalid input"

@@ -34,7 +34,6 @@ def create_social_network(data):
     '''
     adict = {}
     li_st2 = []
-    k = []
     li_st = data.splitlines()
     for i in li_st:
         li_st2 = i.split(" follows ")

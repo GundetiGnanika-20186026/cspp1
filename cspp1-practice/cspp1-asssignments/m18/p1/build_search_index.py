@@ -26,7 +26,7 @@ def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
     '''
-    import collections
+    
     stopwords = {}
     with open(filename, 'r') as f_stopwords:
         for line in f_stopwords:
@@ -62,7 +62,7 @@ def build_search_index(docs):
     # clean up doc and tokenize to words list
     # add or update the words of the doc to the search index
     # return search index
-    
+    import collections
     len_docs = len(docs)
     searchindex = {}
     for i in range(len_docs):

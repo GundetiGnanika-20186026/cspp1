@@ -1,4 +1,4 @@
-import collections
+
 '''
     Tiny Search Engine - Part 1 - Build a search index
 
@@ -26,7 +26,7 @@ def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
     '''
-    
+
     stopwords = {}
     with open(filename, 'r') as f_stopwords:
         for line in f_stopwords:
@@ -66,8 +66,8 @@ def build_search_index(docs):
     len_docs = len(docs)
     searchindex = {}
     for i in range(len_docs):
-    	docs[i]=word_list(docs[i])
-    	docs[i]=collections.counter(docs[i])
+    	docs[i] = word_list(docs[i])
+    	docs[i] = collections.counter(docs[i])
     	print(docs[i])
 
 

@@ -26,6 +26,7 @@ def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
     '''
+    import collections
     stopwords = {}
     with open(filename, 'r') as f_stopwords:
         for line in f_stopwords:

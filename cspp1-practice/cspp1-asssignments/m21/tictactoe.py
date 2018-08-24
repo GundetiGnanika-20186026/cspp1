@@ -87,7 +87,7 @@ def main():
     '''main function'''
     #read the input
     list1 = []
-    for i in range(3):
+    for _ in range(3):
         list1.append(input().split())
     if isvalidinput(list1) and checkgame(list1):
         print(checkforwinner(list1))

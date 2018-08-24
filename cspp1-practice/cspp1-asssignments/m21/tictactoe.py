@@ -13,7 +13,7 @@ def isvalidinput(list1):
         sum1 += i.count('o') + i.count('x') + i.count(".")
     if sum1 != 9:
         print("invalid input")
-        return 
+        return
     if x_sum1 - o_sum1 not in (0, 1, -1):
         print("invalid game")
         return
@@ -27,9 +27,9 @@ def checkgame(list1):
             count += 1
     for i in range(len(list1)):
         if list1[0][i] == list1[1][i] and list1[1][i] == list1[2][i]:
-            count += 1 
+            count += 1
     if list1[0][0] == list1[1][1] and list1[1][1] == list1[2][2]:
-        count+= 1
+        count += 1
     if list1[0][2] == list1[1][1] and list1[1][1] == list1[2][0]:
         count += 1
     if count > 1:
@@ -55,7 +55,7 @@ def diagonal(list1):
         return list1[0][2]
 def checkforwinner(list1):
     '''check for winner'''
-    winner =  horizontal(list1)
+    winner = horizontal(list1)
     winner1 = vertical(list1)
     winner2 = diagonal(list1)
     if winner and winner1 or winner1 and winner2 or winner and winner2:

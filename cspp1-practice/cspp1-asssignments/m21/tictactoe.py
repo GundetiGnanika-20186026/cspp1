@@ -14,10 +14,12 @@ def isvalidinput(list1):
     if sum1 != 9:
         print("invalid input")
         return  
+    return None
     if(x_sum1 - o_sum1 not in (0, 1, -1)):
         print("invalid game")
         return
     return True
+    return None
 def checkgame(list1):
     '''checking weather the game is valid or not'''
     count = 0
@@ -36,23 +38,27 @@ def checkgame(list1):
         print("invalid game")
     else:
         return True
+    return None
 def horizontal(list1):
     '''horizontal check'''
     a_1 = len(list1)
     for i in range(a_1):
         if list1[i][0] == list1[i][1] and list1[i][1] == list1[i][2]:
             return list1[i][0]
+    return None
 def vertical(list1):
     '''vertical check'''
     for i in range(len(list1)):
         if list1[0][i] == list1[1][i] and list1[1][i] == list1[2][i]:
             return list1[0][i]
+    return None
 def diagonal(list1):
     '''diagonal check'''
     if list1[0][0] == list1[1][1] and list1[1][1] == list1[2][2]:
         return list1[0][0]
     if list1[0][2] == list1[1][1] and list1[1][1] == list1[2][0]:
         return list1[0][2]
+    return None
 def checkforwinner(list1):
     '''check for winner'''
     winner =  horizontal(list1)

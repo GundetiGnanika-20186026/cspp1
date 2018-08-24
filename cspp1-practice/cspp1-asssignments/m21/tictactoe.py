@@ -1,4 +1,5 @@
 def isvalidinput(list1):
+    '''checking wether the input is valid or not'''
     x_sum = 0
     o_sum = 0
     sum = 0
@@ -13,8 +14,8 @@ def isvalidinput(list1):
         print("invalid game")
         return
     return True
-
 def checkgame(list1):
+    '''checking weather the game is valid or not'''
     count = 0
     for i in range(len(list1)):
         if list1[i][0] == list1[i][1] and list1[i][1] == list1[i][2]:
@@ -30,32 +31,29 @@ def checkgame(list1):
         print("invalid game")
     else:
         return True
-
 def horizontal(list1):
+    '''horizontal check'''
     for i in range(len(list1)):
         if list1[i][0] == list1[i][1] and list1[i][1] == list1[i][2]:
             return list1[i][0]
-
 def vertical(list1):
+    '''vertical check'''
     for i in range(len(list1)):
         if list1[0][i] == list1[1][i] and list1[1][i] == list1[2][i]:
             return list1[0][i]
-
 def diagonal(list1):
+    '''diagonal check'''
     if list1[0][0] == list1[1][1] and list1[1][1] == list1[2][2]:
         return list1[0][0]
     if list1[0][2] == list1[1][1] and list1[1][1] == list1[2][0]:
         return list1[0][2]
-
-
 def checkforwinner(list1):
+    '''check for winner'''
     winner =  horizontal(list1)
     winner1 = vertical(list1)
     winner2 = diagonal(list1)
-
     if (winner and winner1) or (winner1 and winner2) or (winner and winner2):
         return ("invalid game")
-        
     if winner:
         return winner
     if winner1:
@@ -64,8 +62,6 @@ def checkforwinner(list1):
         return winner2
     else:
         return "draw"
-    
-
 # def read_input():
 #     list1=[]
 #     for i in range(3):
@@ -85,6 +81,7 @@ def checkforwinner(list1):
 #             if j not in('x', 'o' ,'.'):
 #                 return "invalid input"
 def main():
+    '''main function'''
     #read the input
     list1 = []
     for i in range(3):

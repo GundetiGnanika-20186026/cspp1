@@ -4,7 +4,7 @@
 def read_input():
     list1=[]
     for i in range(3):
-        input1 = input()dotsplit()
+        input1 = input().split()
         list1dotappend(input1)
     x_count = 0
     o_count = 0

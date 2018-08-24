@@ -1,3 +1,7 @@
+'''
+Author:Gnanika
+Date:24 August 2018
+'''
 def isvalidinput(list1):
     '''checking wether the input is valid or not'''
     x_sum = 0
@@ -52,7 +56,7 @@ def checkforwinner(list1):
     winner =  horizontal(list1)
     winner1 = vertical(list1)
     winner2 = diagonal(list1)
-    if (winner and winner1) or (winner1 and winner2) or (winner and winner2):
+    if winner and winner1 or winner1 and winner2 or winner and winner2:
         return ("invalid game")
     if winner:
         return winner

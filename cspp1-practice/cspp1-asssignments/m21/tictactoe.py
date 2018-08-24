@@ -67,7 +67,6 @@ def checkforwinner(list1):
     if winner2:
         return winner2
     return "draw"
-    return None
 # def read_input():
 #     list1=[]
 #     for i in range(3):

@@ -68,7 +68,12 @@ def build_search_index(docs):
     for i in range(len_docs):
     	docs[i] = word_list(docs[i])
     	docs[i] = collections.Counter(docs[i])
-    print(docs[i])
+    for i in range(len_docs):
+    	for j in docs[i]:
+    		if j in searchindex:
+    			searchindex.append((i,docs[i][j]))
+            else:
+    			searchindex[j] = [(i,docs[i][j])]
 
 
 
@@ -96,9 +101,9 @@ def main():
     for i in range(lines):
         documents.append(input().lower())
         i += 1
-    build_search_index(documents)
+    
     
     # call print to display the search index
-    #print_search_index(build_search_index(documents))
+    print_search_index(build_search_index(documents))
 if __name__ == '__main__':
     main()

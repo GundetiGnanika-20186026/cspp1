@@ -2,12 +2,12 @@ def horizontal(list1):
     for i in list1:
         if i[0] == i[1] and i[1] == i[2]:
             return i[0]
-        return False
+    return False
 def vertical(list1):
     for i in list1:
         if list1[0][i] == list1[1][i] and list1[1][i] == list1[2][i]:
              return list1[0][i]
-        return False
+    return False
 def diagonal(list1):
     c = list1[1][1] 
     if (list1[0][0] == c and c == list1[2][2]) or (list1[0][2] == c and list1[2][0]):
@@ -49,7 +49,7 @@ def main():
     diag = diagonal(list1)
     if  horizon == False and verti == False and diag == False:
         print("draw")
-    
+
     
 
 if __name__ == '__main__':

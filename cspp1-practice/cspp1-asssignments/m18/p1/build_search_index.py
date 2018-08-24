@@ -74,7 +74,7 @@ def build_search_index(docs):
     			searchindex.append((i,docs[i][j]))
             else:
     			searchindex[j] = [(i,docs[i][j])]
-
+    return searchindex
 
 
 # helper function to print the search index

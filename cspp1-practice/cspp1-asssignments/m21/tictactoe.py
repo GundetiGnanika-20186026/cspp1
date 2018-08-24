@@ -4,17 +4,17 @@ Date:24 August 2018
 '''
 def isvalidinput(list1):
     '''checking wether the input is valid or not'''
-    x_sum = 0
-    o_sum = 0
-    sum = 0
+    x_sum1 = 0
+    o_sum1 = 0
+    sum1 = 0
     for i in list1:
-        x_sum += i.count('x')
-        o_sum += i.count('o')
-        sum += i.count('o') + i.count('x') + i.count(".")
-    if sum != 9:
+        x_sum1 += i.count('x')
+        o_sum1 += i.count('o')
+        sum1 += i.count('o') + i.count('x') + i.count(".")
+    if sum1 != 9:
         print("invalid input")
         return  
-    if(x_sum - o_sum not in (0, 1, -1)):
+    if(x_sum1 - o_sum1 not in (0, 1, -1)):
         print("invalid game")
         return
     return True

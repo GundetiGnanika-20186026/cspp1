@@ -47,7 +47,7 @@ def word_list(text):
     list2 = list1[:]
     for i in list2:
         if i in extra:
-            list1.remove(i) 
+            list1.remove(i)
     return list1
 def build_search_index(docs):
     '''
@@ -81,7 +81,6 @@ def print_search_index(index):
     keys = sorted(index.keys())
     for key in keys:
         print(key, " - ", index[key])
-    
 # main function that loads the docs from files
 def main():
     '''

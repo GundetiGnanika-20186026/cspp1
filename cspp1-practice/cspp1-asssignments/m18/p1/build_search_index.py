@@ -68,9 +68,9 @@ def build_search_index(docs):
     for i in range(len_docs):
         for j in docs[i]:
             if j in searchindex:
-                searchindex[j].append((i,docs[i][j]))
+                searchindex[j].append((i, docs[i][j]))
             else:
-                searchindex[j] = [(i,docs[i][j])]
+                searchindex[j] = [(i, docs[i][j])]
     return searchindex
 # helper function to print the search index
 # use this to verify how the search index looks

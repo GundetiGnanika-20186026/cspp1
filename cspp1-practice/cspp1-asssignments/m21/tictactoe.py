@@ -14,12 +14,10 @@ def isvalidinput(list1):
     if sum1 != 9:
         print("invalid input")
         return  
-    return None
     if(x_sum1 - o_sum1 not in (0, 1, -1)):
         print("invalid game")
         return
     return True
-    return None
 def checkgame(list1):
     '''checking weather the game is valid or not'''
     count = 0
@@ -38,7 +36,6 @@ def checkgame(list1):
         print("invalid game")
     else:
         return True
-    return None
 def horizontal(list1):
     '''horizontal check'''
     a_1 = len(list1)

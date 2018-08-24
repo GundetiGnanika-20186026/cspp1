@@ -14,7 +14,7 @@ def isvalidinput(list1):
     if sum1 != 9:
         print("invalid input")
         return
-    return None 
+        return None 
     if(x_sum1 - o_sum1 not in (0, 1, -1)):
         print("invalid game")
         return

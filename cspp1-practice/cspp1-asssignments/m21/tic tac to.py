@@ -9,7 +9,7 @@ def read_input():
     for i in list1:
         for j in i:
             if j not in('x','o','.'):
-                return("the game input does not have valid characters")
+                return("invalid input")
     return list1
 
 

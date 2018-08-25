@@ -7,7 +7,7 @@ def main():
     input1 = int(input())
     for i in range(input1):
         input2 = input()
-        str1 += str1 + input1
+        str1 += str1 + input2
     print(str1)
 
 

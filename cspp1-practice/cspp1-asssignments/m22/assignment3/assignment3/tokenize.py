@@ -10,7 +10,7 @@ def main():
     list1 =[] 
     input1 = int(input())
     for i in range(input1):
-        input2 = input().split(" ")
+        input2 = input()
         print(tokenize(input2))
         
    

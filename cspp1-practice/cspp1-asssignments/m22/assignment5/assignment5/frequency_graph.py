@@ -7,10 +7,10 @@ def frequency_graph(dictionary):
       sort1 = sorted(dictionary)
       
     for i in sort1:
-    	str1 = ''
-    	for j in range(sort1[i]):
-    		str1 += '#'
-    	sort1[i] = str1
+        str1 = ''
+        for j in range(sort1[i]):
+            str1 += '#'
+        sort1[i] = str1
         print(i+" "+"-"+" "+str(sort1[i]))
 
 def main():

@@ -12,7 +12,7 @@ def clean_string(string):
     str2 = string[:]
     for i in str2:
         if  i not in ('0','1','2','3','4','5','6','7','8','9') or ('a' <= i >= 'z') or ('A' <= i >= 'Z'): 
-            string.remove(i)
+            string.delete(i)
     return string
 def main():
     string = input()

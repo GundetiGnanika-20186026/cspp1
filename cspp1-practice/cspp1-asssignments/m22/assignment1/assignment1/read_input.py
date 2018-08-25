@@ -3,11 +3,11 @@ Write a python program to read multiple lines of text input and store the input 
 '''
 
 def main():
-	str1 = ''
+    str1 = ''
     input1 = int(input())
     for i in range(n):
-    	input2 = input()
-    	str1 += str1 + input1
+        input2 = input()
+        str1 += str1 + input1
     print(str1)
 
 

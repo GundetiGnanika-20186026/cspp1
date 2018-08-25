@@ -3,6 +3,7 @@ Author:Gnanika
 date: 25 August 2018
 '''
 def clean_string(string):
+    '''cleaning unwanted aharacters'''
     str2 = ''
     for i in string:
         if  (i in ('0', '1', '2', '3', '4', '5', '6', '7', '8', '9')) or ('a' <= i >= 'z') or ('A' <= i >= 'Z'): 

@@ -7,10 +7,10 @@ def tokenize(string):
     adict = collections.Counter(string)
     return adict        
 def main():
-	str1 ='' 
-	input1 = int(input())
-	for i in range(input1):
-		input2 = input()
+    str1 ='' 
+    input1 = int(input())
+    for i in range(input1):
+        input2 = input()
         str1 = input2
         dict1 = tokenize(str1)
     print(dict1)

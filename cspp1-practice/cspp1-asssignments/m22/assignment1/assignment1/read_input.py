@@ -6,9 +6,9 @@ def main():
     str1 = ''
     input1 = int(input())
     for i in range(input1):
-        input2 = input().split("\n")
+        input2 = input()
         str1 += str1 + input2
-    print(str1)
+        print(str1)
 
 
 if __name__ == '__main__':

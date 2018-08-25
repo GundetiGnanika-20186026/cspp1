@@ -6,7 +6,7 @@ def print_dictionary(dictionary):
     '''printing the dictionary'''
     sort1 = sorted(dictionary)
     for i in sort1:
-            dictionary[i] = ''
+        dictionary[i] = ''
         for j in range(dictionary[i]):
             dictionary[i]+='#'
     print(sort1)    

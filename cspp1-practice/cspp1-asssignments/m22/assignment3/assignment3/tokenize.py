@@ -2,10 +2,10 @@
 Write a function to tokenize a given string and return a dictionary with the frequency of
 each word
 '''
-import collections
+import Collections
 def tokenize(string):
 
-    adict = collections.Counter(string.split())
+    adict = Collections.Counter(string.split())
     return adict        
 def main():
     list1 =[] 

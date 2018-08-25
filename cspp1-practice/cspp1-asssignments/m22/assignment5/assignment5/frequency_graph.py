@@ -4,14 +4,15 @@ frequency of each word. Display the frequency values using “#” as a text bas
 '''
 
 def frequency_graph(dictionary):
+    print(dictionary)
     sort1 = sorted(dictionary)
-    print(sort1)  
+  
     for i in sort1:
         str1 = ''
         for j in range(sort1[i][0]):
             str1 += '#'
         sort1[i] = str1
-        print(i+" "+"-"+" "+str(sort1[i]))
+        #print(i+" "+"-"+" "+str(sort1[i]))
 
 def main():
     dictionary = eval(input())

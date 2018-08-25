@@ -1,0 +1,15 @@
+'''
+Write a python program to read multiple lines of text input and store the input into a string.
+'''
+
+def main():
+	str1 = ''
+    input1 = int(input())
+    for i in range(n):
+    	input2 = input()
+    	str1 += str1 + input1
+    print(str1)
+
+
+if __name__ == '__main__':
+    main()

@@ -27,7 +27,7 @@ def main():
             for j in i:
                 if  ('a' <= j >= 'z') or ('A' <= j >= 'Z') or ' ':
                     str3 += j
-        
+        print(str3)
         print(tokenize(str3))
 
 if __name__ == '__main__':

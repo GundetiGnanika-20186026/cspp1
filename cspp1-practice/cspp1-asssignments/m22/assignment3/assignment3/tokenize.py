@@ -11,7 +11,7 @@ def tokenize(string):
             adict[i] += 1
         else:
             adict[i] = 1
-    return adict    
+    return adict
 def main():
     '''main function'''
     str2 = ''
@@ -20,7 +20,7 @@ def main():
     if  input1 == 1:
         input2 = input()
         print(tokenize(input2))
-    else:       
+    else:
         for i in range(input1):
             input2 = input()
             str2 = str2 + input2

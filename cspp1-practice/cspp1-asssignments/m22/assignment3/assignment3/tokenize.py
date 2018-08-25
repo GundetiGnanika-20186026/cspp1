@@ -24,9 +24,9 @@ def main():
             input2 = input()
             str2 = str2 + input2
         for i in str2:
-            str2 = str2.strip()
-            if i not in ('.',',',';'):
-                str3 += i
+            for j in i:
+            if j not in ('.',',',';'):
+                str3 += j
         print(tokenize(input2))
 
 if __name__ == '__main__':

@@ -25,9 +25,10 @@ def main():
             str2 = str2 + input2
         for i in str2:
             for j in i:
-                if j not in ('.',',',';'):
+                if j in ('a' <= j >= 'z') or ('A' <= j >= 'Z'):
                     str3 += j
-        print(tokenize(input2))
+        print(str3)
+        print(tokenize(str3))
 
 if __name__ == '__main__':
     main()

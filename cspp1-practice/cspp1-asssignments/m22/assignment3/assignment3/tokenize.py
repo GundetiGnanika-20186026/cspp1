@@ -26,7 +26,7 @@ def main():
         for i in str2:
             for j in i:
                 if  ('a' <= j >= 'z') or ('A' <= j >= 'Z') or ' ':
-                    
+                    str3 += j
         print(str3)
         print(tokenize(str3))
 

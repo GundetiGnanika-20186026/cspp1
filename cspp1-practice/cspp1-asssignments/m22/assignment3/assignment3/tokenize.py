@@ -4,7 +4,7 @@ each word
 '''
 import collections
 def tokenize(string):
-    adict = collections.Counter(string)
+    adict = collections.Count(string)
     return adict        
 def main():
     list1 =[] 

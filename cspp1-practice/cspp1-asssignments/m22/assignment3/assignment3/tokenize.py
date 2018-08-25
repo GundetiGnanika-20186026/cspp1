@@ -14,6 +14,7 @@ def tokenize(string):
     return adict    
 def main():
     str2 = ''
+    str3 = ''
     input1 = int(input())
     if  input1 == 1:
         input2 = input()
@@ -22,8 +23,10 @@ def main():
         for i in range(input1):
             input2 = input()
             str2 = str2 + input2
-        print(str2)
-        print(tokenize(str2))
+        for i in str2:
+            if i not in ('.',',',';'):
+                str3 += i
+        print(tokenize(input2))
 
 if __name__ == '__main__':
     main()

@@ -22,6 +22,7 @@ def main():
         for i in range(input1):
             input2 = input()
             str2 = str2 + input2
+            print(str2)
         print(tokenize(str2))
 
 if __name__ == '__main__':

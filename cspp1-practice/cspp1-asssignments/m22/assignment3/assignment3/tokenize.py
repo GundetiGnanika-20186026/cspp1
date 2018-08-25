@@ -7,13 +7,13 @@ def tokenize(string):
     adict = collections.Counter(string)
     return adict        
 def main():
-    str1 ='' 
+    list1 =[] 
     input1 = int(input())
     for i in range(input1):
-        input2 = input()
-        str1 = input2
-        dict1 = tokenize(str1)
-    print(dict1)
+        input2 = input().split(" ")
+        print(tokenize(input2))
+        
+   
 
 if __name__ == '__main__':
     main()

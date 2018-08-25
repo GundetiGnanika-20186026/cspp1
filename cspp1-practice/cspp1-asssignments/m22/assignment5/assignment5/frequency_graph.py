@@ -1,23 +1,20 @@
 '''
-Write a function to print a dictionary with the keys in sorted order along with the
-frequency of each word. Display the frequency values using “#” as a text based graph
+Author:Gnanika
+Date: 25 August
 '''
-
 def frequency_graph(dictionary):
-    
+    '''replacing of frequency with #'''
     sort1 = sorted(dictionary)
-    
     for i in sort1:
         if i in dictionary:
             str1 = ''
-            for j in range(dictionary[i]):
+            for _ in range(dictionary[i]):
                 str1 += '#'
             dictionary[i] = str1
             print(i+" "+"-"+" "+str(dictionary[i]))
-
 def main():
+    '''main function'''
     dictionary = eval(input())
     frequency_graph(dictionary)
-
 if __name__ == '__main__':
     main()

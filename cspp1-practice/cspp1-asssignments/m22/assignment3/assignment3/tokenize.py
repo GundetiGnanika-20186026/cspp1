@@ -15,7 +15,7 @@ def tokenize(string):
 def main():
  
     input1 = int(input())
-    for i in range(input1):
+    if input1 == 1:
         input2 = input()
         print(tokenize(input2))
         

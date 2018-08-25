@@ -9,11 +9,11 @@ def frequency_graph(dictionary):
     
     for i in sort1:
         if i in dictionary:
-        str1 = ''
-        for j in range(dictionary[i][0]):
-            str1 += '#'
-        dictionary[i] = str1
-        print(i+" "+"-"+" "+str(sort1[i]))
+            str1 = ''
+            for j in range(dictionary[i][0]):
+                str1 += '#'
+            dictionary[i] = str1
+            print(i+" "+"-"+" "+str(sort1[i]))
 
 def main():
     dictionary = eval(input())
